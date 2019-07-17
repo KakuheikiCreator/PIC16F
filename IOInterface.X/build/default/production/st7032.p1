@@ -1,0 +1,1989 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"68 st7032.c
+[; ;st7032.c: 68: typedef struct {
+[s S354 `uc 1 `uc 1 ]
+[n S354 . u8CursorPos u8Settings ]
+"121 ./i2cUtil.h
+[; ;./i2cUtil.h: 121: extern unsigned char I2C_u8MstStartSSP1(unsigned char u8Address, unsigned char bReadFlg);
+[v _I2C_u8MstStartSSP1 `(uc ~T0 @X0 0 ef2`uc`uc ]
+"79 st7032.c
+[; ;st7032.c: 79: static void vExecCmdSSP1(unsigned char u8Cmd);
+[v _vExecCmdSSP1 `(v ~T0 @X0 0 sf1`uc ]
+[v F2428 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF2428 ~T0 @X0 0 e ]
+[p i __delay ]
+"85 st7032.c
+[; ;st7032.c: 85: static void vExecCmdEndSSP1(unsigned char u8Cmd);
+[v _vExecCmdEndSSP1 `(v ~T0 @X0 0 sf1`uc ]
+"125 ./i2cUtil.h
+[; ;./i2cUtil.h: 125: extern unsigned char I2C_u8MstStartSSP2(unsigned char u8Address, unsigned char bReadFlg);
+[v _I2C_u8MstStartSSP2 `(uc ~T0 @X0 0 ef2`uc`uc ]
+"81 st7032.c
+[; ;st7032.c: 81: static void vExecCmdSSP2(unsigned char u8Cmd);
+[v _vExecCmdSSP2 `(v ~T0 @X0 0 sf1`uc ]
+"87
+[; ;st7032.c: 87: static void vExecCmdEndSSP2(unsigned char u8Cmd);
+[v _vExecCmdEndSSP2 `(v ~T0 @X0 0 sf1`uc ]
+"137 ./i2cUtil.h
+[; ;./i2cUtil.h: 137: extern unsigned char I2C_u8MstTxSSP1(unsigned char u8Data);
+[v _I2C_u8MstTxSSP1 `(uc ~T0 @X0 0 ef1`uc ]
+"129
+[; ;./i2cUtil.h: 129: extern void I2C_vMstStopSSP1();
+[v _I2C_vMstStopSSP1 `(v ~T0 @X0 0 e? ]
+"91 st7032.c
+[; ;st7032.c: 91: static unsigned char bSetCursorSSP1(unsigned char u8Pos);
+[v _bSetCursorSSP1 `(uc ~T0 @X0 0 sf1`uc ]
+"141 ./i2cUtil.h
+[; ;./i2cUtil.h: 141: extern unsigned char I2C_u8MstTxSSP2(unsigned char u8Data);
+[v _I2C_u8MstTxSSP2 `(uc ~T0 @X0 0 ef1`uc ]
+"133
+[; ;./i2cUtil.h: 133: extern void I2C_vMstStopSSP2();
+[v _I2C_vMstStopSSP2 `(v ~T0 @X0 0 e? ]
+"93 st7032.c
+[; ;st7032.c: 93: static unsigned char bSetCursorSSP2(unsigned char u8Pos);
+[v _bSetCursorSSP2 `(uc ~T0 @X0 0 sf1`uc ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"493
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 493: __asm("PORTB equ 0Dh");
+[; <" PORTB equ 0Dh ;# ">
+"555
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 555: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"617
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 617: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 668: __asm("PIR3 equ 013h");
+[; <" PIR3 equ 013h ;# ">
+"708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 708: __asm("PIR4 equ 014h");
+[; <" PIR4 equ 014h ;# ">
+"734
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 734: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"754
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 754: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"761
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 761: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 781: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"801
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 801: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"873
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 873: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"943
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 943: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"963
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 963: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"983
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 983: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"1054
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1054: __asm("CPSCON0 equ 01Eh");
+[; <" CPSCON0 equ 01Eh ;# ">
+"1108
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1108: __asm("CPSCON1 equ 01Fh");
+[; <" CPSCON1 equ 01Fh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1154: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1216
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1216: __asm("TRISB equ 08Dh");
+[; <" TRISB equ 08Dh ;# ">
+"1278
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1278: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1340: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1391
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1391: __asm("PIE3 equ 093h");
+[; <" PIE3 equ 093h ;# ">
+"1431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1431: __asm("PIE4 equ 094h");
+[; <" PIE4 equ 094h ;# ">
+"1457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1457: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1540
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1540: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1591
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1591: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1650: __asm("OSCTUNE equ 098h");
+[; <" OSCTUNE equ 098h ;# ">
+"1708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1708: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1780
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1780: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1842
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1842: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1849
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1849: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1869
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1869: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1889
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1889: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1969
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 1969: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"2041
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2041: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"2098
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2098: __asm("LATB equ 010Dh");
+[; <" LATB equ 010Dh ;# ">
+"2160
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2160: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"2217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2217: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"2283
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2283: __asm("CM2CON0 equ 0113h");
+[; <" CM2CON0 equ 0113h ;# ">
+"2340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2340: __asm("CM2CON1 equ 0114h");
+[; <" CM2CON1 equ 0114h ;# ">
+"2406
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2406: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2432
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2432: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2459
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2459: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2535
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2535: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2596: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2648
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2648: __asm("SRCON0 equ 011Ah");
+[; <" SRCON0 equ 011Ah ;# ">
+"2719
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2719: __asm("SRCON1 equ 011Bh");
+[; <" SRCON1 equ 011Bh ;# ">
+"2781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2781: __asm("APFCON0 equ 011Dh");
+[; <" APFCON0 equ 011Dh ;# ">
+"2843
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2843: __asm("APFCON1 equ 011Eh");
+[; <" APFCON1 equ 011Eh ;# ">
+"2863
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2863: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2915
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2915: __asm("ANSELB equ 018Dh");
+[; <" ANSELB equ 018Dh ;# ">
+"2980
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2980: __asm("EEADR equ 0191h");
+[; <" EEADR equ 0191h ;# ">
+"2987
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 2987: __asm("EEADRL equ 0191h");
+[; <" EEADRL equ 0191h ;# ">
+"3007
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3007: __asm("EEADRH equ 0192h");
+[; <" EEADRH equ 0192h ;# ">
+"3027
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3027: __asm("EEDAT equ 0193h");
+[; <" EEDAT equ 0193h ;# ">
+"3034
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3034: __asm("EEDATL equ 0193h");
+[; <" EEDATL equ 0193h ;# ">
+"3039
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3039: __asm("EEDATA equ 0193h");
+[; <" EEDATA equ 0193h ;# ">
+"3072
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3072: __asm("EEDATH equ 0194h");
+[; <" EEDATH equ 0194h ;# ">
+"3092
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3092: __asm("EECON1 equ 0195h");
+[; <" EECON1 equ 0195h ;# ">
+"3154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3154: __asm("EECON2 equ 0196h");
+[; <" EECON2 equ 0196h ;# ">
+"3174
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3174: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"3194
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3194: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"3214
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3214: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"3221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3221: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"3226
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3226: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"3230
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3230: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"3275
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3275: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"3280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3280: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"3313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3313: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"3375
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3375: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"3437
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3437: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"3489
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3489: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"3518
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3518: __asm("WPUB equ 020Dh");
+[; <" WPUB equ 020Dh ;# ">
+"3588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3588: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"3593
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3593: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3626
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3626: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3631
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3631: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3664
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3664: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3669
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3669: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3702: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3707
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3707: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3824
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3824: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3829
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3829: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 3833: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"4028
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4028: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"4033
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4033: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"4150
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4150: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"4155
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4155: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"4272
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4272: __asm("SSP2BUF equ 0219h");
+[; <" SSP2BUF equ 0219h ;# ">
+"4292
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4292: __asm("SSP2ADD equ 021Ah");
+[; <" SSP2ADD equ 021Ah ;# ">
+"4312
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4312: __asm("SSP2MSK equ 021Bh");
+[; <" SSP2MSK equ 021Bh ;# ">
+"4332
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4332: __asm("SSP2STAT equ 021Ch");
+[; <" SSP2STAT equ 021Ch ;# ">
+"4394
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4394: __asm("SSP2CON1 equ 021Dh");
+[; <" SSP2CON1 equ 021Dh ;# ">
+"4464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4464: __asm("SSP2CON2 equ 021Eh");
+[; <" SSP2CON2 equ 021Eh ;# ">
+"4526
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4526: __asm("SSP2CON3 equ 021Fh");
+[; <" SSP2CON3 equ 021Fh ;# ">
+"4588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4588: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"4595
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4595: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"4615
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4615: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"4635
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4635: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"4717
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4717: __asm("PWM1CON equ 0294h");
+[; <" PWM1CON equ 0294h ;# ">
+"4787
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4787: __asm("CCP1AS equ 0295h");
+[; <" CCP1AS equ 0295h ;# ">
+"4792
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4792: __asm("ECCP1AS equ 0295h");
+[; <" ECCP1AS equ 0295h ;# ">
+"4949
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4949: __asm("PSTR1CON equ 0296h");
+[; <" PSTR1CON equ 0296h ;# ">
+"4993
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 4993: __asm("CCPR2 equ 0298h");
+[; <" CCPR2 equ 0298h ;# ">
+"5000
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5000: __asm("CCPR2L equ 0298h");
+[; <" CCPR2L equ 0298h ;# ">
+"5020
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5020: __asm("CCPR2H equ 0299h");
+[; <" CCPR2H equ 0299h ;# ">
+"5040
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5040: __asm("CCP2CON equ 029Ah");
+[; <" CCP2CON equ 029Ah ;# ">
+"5122
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5122: __asm("PWM2CON equ 029Bh");
+[; <" PWM2CON equ 029Bh ;# ">
+"5192
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5192: __asm("CCP2AS equ 029Ch");
+[; <" CCP2AS equ 029Ch ;# ">
+"5197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5197: __asm("ECCP2AS equ 029Ch");
+[; <" ECCP2AS equ 029Ch ;# ">
+"5354
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5354: __asm("PSTR2CON equ 029Dh");
+[; <" PSTR2CON equ 029Dh ;# ">
+"5398
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5398: __asm("CCPTMRS equ 029Eh");
+[; <" CCPTMRS equ 029Eh ;# ">
+"5403
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5403: __asm("CCPTMRS0 equ 029Eh");
+[; <" CCPTMRS0 equ 029Eh ;# ">
+"5572
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5572: __asm("CCPR3 equ 0311h");
+[; <" CCPR3 equ 0311h ;# ">
+"5579
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5579: __asm("CCPR3L equ 0311h");
+[; <" CCPR3L equ 0311h ;# ">
+"5599
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5599: __asm("CCPR3H equ 0312h");
+[; <" CCPR3H equ 0312h ;# ">
+"5619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5619: __asm("CCP3CON equ 0313h");
+[; <" CCP3CON equ 0313h ;# ">
+"5683
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5683: __asm("CCPR4 equ 0318h");
+[; <" CCPR4 equ 0318h ;# ">
+"5690
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5690: __asm("CCPR4L equ 0318h");
+[; <" CCPR4L equ 0318h ;# ">
+"5710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5710: __asm("CCPR4H equ 0319h");
+[; <" CCPR4H equ 0319h ;# ">
+"5730
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5730: __asm("CCP4CON equ 031Ah");
+[; <" CCP4CON equ 031Ah ;# ">
+"5794
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5794: __asm("IOCBP equ 0394h");
+[; <" IOCBP equ 0394h ;# ">
+"5864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5864: __asm("IOCBN equ 0395h");
+[; <" IOCBN equ 0395h ;# ">
+"5934
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 5934: __asm("IOCBF equ 0396h");
+[; <" IOCBF equ 0396h ;# ">
+"6004
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6004: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"6080
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6080: __asm("MDCON equ 039Ch");
+[; <" MDCON equ 039Ch ;# ">
+"6131
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6131: __asm("MDSRC equ 039Dh");
+[; <" MDSRC equ 039Dh ;# ">
+"6184
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6184: __asm("MDCARL equ 039Eh");
+[; <" MDCARL equ 039Eh ;# ">
+"6249
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6249: __asm("MDCARH equ 039Fh");
+[; <" MDCARH equ 039Fh ;# ">
+"6314
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6314: __asm("TMR4 equ 0415h");
+[; <" TMR4 equ 0415h ;# ">
+"6334
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6334: __asm("PR4 equ 0416h");
+[; <" PR4 equ 0416h ;# ">
+"6354
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6354: __asm("T4CON equ 0417h");
+[; <" T4CON equ 0417h ;# ">
+"6425
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6425: __asm("TMR6 equ 041Ch");
+[; <" TMR6 equ 041Ch ;# ">
+"6445
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6445: __asm("PR6 equ 041Dh");
+[; <" PR6 equ 041Dh ;# ">
+"6465
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6465: __asm("T6CON equ 041Eh");
+[; <" T6CON equ 041Eh ;# ">
+"6536
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6536: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"6568
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6568: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"6588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6588: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"6608
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6608: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"6628
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6628: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"6648
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6648: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"6668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6668: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"6688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6688: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"6708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6708: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"6728
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6728: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"6748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h: 6748: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"104 st7032.c
+[; ;st7032.c: 104: static ST7032_state stStateSSP1;
+[v _stStateSSP1 `S354 ~T0 @X0 1 s ]
+"107
+[; ;st7032.c: 107: static ST7032_state stStateSSP2;
+[v _stStateSSP2 `S354 ~T0 @X0 1 s ]
+"128
+[; ;st7032.c: 128: extern void ST7032_vInitSSP1() {
+[v _ST7032_vInitSSP1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vInitSSP1 ]
+[f ]
+"130
+[; ;st7032.c: 130:     stStateSSP1.u8CursorPos = 0x00;
+[e = . _stStateSSP1 0 -> -> 0 `i `uc ]
+"132
+[; ;st7032.c: 132:     stStateSSP1.u8Settings = 0xE8;
+[e = . _stStateSSP1 1 -> -> 232 `i `uc ]
+"134
+[; ;st7032.c: 134:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"136
+[; ;st7032.c: 136:     vExecCmdSSP1((0b00111001));
+[e ( _vExecCmdSSP1 (1 -> -> 57 `i `uc ]
+"137
+[; ;st7032.c: 137:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"139
+[; ;st7032.c: 139:     vExecCmdSSP1((0b00010100));
+[e ( _vExecCmdSSP1 (1 -> -> 20 `i `uc ]
+"140
+[; ;st7032.c: 140:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"142
+[; ;st7032.c: 142:     vExecCmdSSP1((0b01110000) | (stStateSSP1.u8Settings & 0x0F));
+[e ( _vExecCmdSSP1 (1 -> | -> 112 `i & -> . _stStateSSP1 1 `i -> 15 `i `uc ]
+"143
+[; ;st7032.c: 143:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"145
+[; ;st7032.c: 145:     vExecCmdSSP1((0b01011000) | (stStateSSP1.u8Settings >> 4));
+[e ( _vExecCmdSSP1 (1 -> | -> 88 `i >> -> . _stStateSSP1 1 `i -> 4 `i `uc ]
+"146
+[; ;st7032.c: 146:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"148
+[; ;st7032.c: 148:     vExecCmdSSP1((0b01101100));
+[e ( _vExecCmdSSP1 (1 -> -> 108 `i `uc ]
+"149
+[; ;st7032.c: 149:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"151
+[; ;st7032.c: 151:     vExecCmdSSP1((0b00111000));
+[e ( _vExecCmdSSP1 (1 -> -> 56 `i `uc ]
+"152
+[; ;st7032.c: 152:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"154
+[; ;st7032.c: 154:     vExecCmdSSP1((0b00001000) | 0x04);
+[e ( _vExecCmdSSP1 (1 -> | -> 8 `i -> 4 `i `uc ]
+"155
+[; ;st7032.c: 155:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"157
+[; ;st7032.c: 157:     vExecCmdSSP1((0b10000000));
+[e ( _vExecCmdSSP1 (1 -> -> 128 `i `uc ]
+"158
+[; ;st7032.c: 158:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"160
+[; ;st7032.c: 160:     vExecCmdEndSSP1((0b00000001));
+[e ( _vExecCmdEndSSP1 (1 -> -> 1 `i `uc ]
+"161
+[; ;st7032.c: 161:     _delay((unsigned long)(((1080))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1080 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"162
+[; ;st7032.c: 162: }
+[e :UE 355 ]
+}
+"179
+[; ;st7032.c: 179: extern void ST7032_vInitSSP2() {
+[v _ST7032_vInitSSP2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vInitSSP2 ]
+[f ]
+"181
+[; ;st7032.c: 181:     stStateSSP2.u8CursorPos = 0x00;
+[e = . _stStateSSP2 0 -> -> 0 `i `uc ]
+"183
+[; ;st7032.c: 183:     stStateSSP2.u8Settings = 0xE8;
+[e = . _stStateSSP2 1 -> -> 232 `i `uc ]
+"185
+[; ;st7032.c: 185:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"187
+[; ;st7032.c: 187:     vExecCmdSSP2((0b00111001));
+[e ( _vExecCmdSSP2 (1 -> -> 57 `i `uc ]
+"188
+[; ;st7032.c: 188:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"190
+[; ;st7032.c: 190:     vExecCmdSSP2((0b00010100));
+[e ( _vExecCmdSSP2 (1 -> -> 20 `i `uc ]
+"191
+[; ;st7032.c: 191:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"193
+[; ;st7032.c: 193:     vExecCmdSSP2((0b01110000) | (stStateSSP2.u8Settings & 0x0F));
+[e ( _vExecCmdSSP2 (1 -> | -> 112 `i & -> . _stStateSSP2 1 `i -> 15 `i `uc ]
+"194
+[; ;st7032.c: 194:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"196
+[; ;st7032.c: 196:     vExecCmdSSP2((0b01011000) | (stStateSSP2.u8Settings >> 4));
+[e ( _vExecCmdSSP2 (1 -> | -> 88 `i >> -> . _stStateSSP2 1 `i -> 4 `i `uc ]
+"197
+[; ;st7032.c: 197:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"199
+[; ;st7032.c: 199:     vExecCmdSSP2((0b01101100));
+[e ( _vExecCmdSSP2 (1 -> -> 108 `i `uc ]
+"200
+[; ;st7032.c: 200:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"202
+[; ;st7032.c: 202:     vExecCmdSSP2((0b00111000));
+[e ( _vExecCmdSSP2 (1 -> -> 56 `i `uc ]
+"203
+[; ;st7032.c: 203:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"205
+[; ;st7032.c: 205:     vExecCmdSSP2((0b00001000) | 0x04);
+[e ( _vExecCmdSSP2 (1 -> | -> 8 `i -> 4 `i `uc ]
+"206
+[; ;st7032.c: 206:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"207
+[; ;st7032.c: 207:     vExecCmdSSP2((0b00000100) | 0x02);
+[e ( _vExecCmdSSP2 (1 -> | -> 4 `i -> 2 `i `uc ]
+"208
+[; ;st7032.c: 208:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"210
+[; ;st7032.c: 210:     vExecCmdSSP2((0b10000000));
+[e ( _vExecCmdSSP2 (1 -> -> 128 `i `uc ]
+"211
+[; ;st7032.c: 211:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"213
+[; ;st7032.c: 213:     vExecCmdEndSSP2((0b00000001));
+[e ( _vExecCmdEndSSP2 (1 -> -> 1 `i `uc ]
+"214
+[; ;st7032.c: 214:     _delay((unsigned long)(((1080))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1080 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"215
+[; ;st7032.c: 215: }
+[e :UE 356 ]
+}
+"233
+[; ;st7032.c: 233: extern void ST7032_vSetContrastSSP1(unsigned char u8Contrast) {
+[v _ST7032_vSetContrastSSP1 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vSetContrastSSP1 ]
+[v _u8Contrast `uc ~T0 @X0 1 r1 ]
+[f ]
+"235
+[; ;st7032.c: 235:     unsigned char u8Val = u8Contrast & 0x3F;
+[v _u8Val `uc ~T0 @X0 1 a ]
+[e = _u8Val -> & -> _u8Contrast `i -> 63 `i `uc ]
+"236
+[; ;st7032.c: 236:     if ((stStateSSP1.u8Settings & 0x3F) == u8Val) {
+[e $ ! == & -> . _stStateSSP1 1 `i -> 63 `i -> _u8Val `i 358  ]
+{
+"237
+[; ;st7032.c: 237:         return;
+[e $UE 357  ]
+"238
+[; ;st7032.c: 238:     }
+}
+[e :U 358 ]
+"240
+[; ;st7032.c: 240:     stStateSSP1.u8Settings = (stStateSSP1.u8Settings & 0xC0) | u8Val;
+[e = . _stStateSSP1 1 -> | & -> . _stStateSSP1 1 `i -> 192 `i -> _u8Val `i `uc ]
+"242
+[; ;st7032.c: 242:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"244
+[; ;st7032.c: 244:     vExecCmdSSP1((0b00111001));
+[e ( _vExecCmdSSP1 (1 -> -> 57 `i `uc ]
+"245
+[; ;st7032.c: 245:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"247
+[; ;st7032.c: 247:     vExecCmdSSP1((0b01110000) | (stStateSSP1.u8Settings & 0x0F));
+[e ( _vExecCmdSSP1 (1 -> | -> 112 `i & -> . _stStateSSP1 1 `i -> 15 `i `uc ]
+"248
+[; ;st7032.c: 248:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"250
+[; ;st7032.c: 250:     vExecCmdSSP1((0b01011000) | (stStateSSP1.u8Settings >> 4));
+[e ( _vExecCmdSSP1 (1 -> | -> 88 `i >> -> . _stStateSSP1 1 `i -> 4 `i `uc ]
+"251
+[; ;st7032.c: 251:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"253
+[; ;st7032.c: 253:     vExecCmdEndSSP1((0b00111000));
+[e ( _vExecCmdEndSSP1 (1 -> -> 56 `i `uc ]
+"254
+[; ;st7032.c: 254:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"255
+[; ;st7032.c: 255: }
+[e :UE 357 ]
+}
+"273
+[; ;st7032.c: 273: extern void ST7032_vSetContrastSSP2(unsigned char u8Contrast) {
+[v _ST7032_vSetContrastSSP2 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vSetContrastSSP2 ]
+[v _u8Contrast `uc ~T0 @X0 1 r1 ]
+[f ]
+"275
+[; ;st7032.c: 275:     unsigned char u8Val = u8Contrast & 0x3F;
+[v _u8Val `uc ~T0 @X0 1 a ]
+[e = _u8Val -> & -> _u8Contrast `i -> 63 `i `uc ]
+"276
+[; ;st7032.c: 276:     if ((stStateSSP2.u8Settings & 0x3F) == u8Val) {
+[e $ ! == & -> . _stStateSSP2 1 `i -> 63 `i -> _u8Val `i 360  ]
+{
+"277
+[; ;st7032.c: 277:         return;
+[e $UE 359  ]
+"278
+[; ;st7032.c: 278:     }
+}
+[e :U 360 ]
+"280
+[; ;st7032.c: 280:     stStateSSP2.u8Settings = (stStateSSP2.u8Settings & 0xC0) | u8Val;
+[e = . _stStateSSP2 1 -> | & -> . _stStateSSP2 1 `i -> 192 `i -> _u8Val `i `uc ]
+"282
+[; ;st7032.c: 282:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"284
+[; ;st7032.c: 284:     vExecCmdSSP2((0b00111001));
+[e ( _vExecCmdSSP2 (1 -> -> 57 `i `uc ]
+"285
+[; ;st7032.c: 285:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"287
+[; ;st7032.c: 287:     vExecCmdSSP2((0b01110000) | (stStateSSP2.u8Settings & 0x0F));
+[e ( _vExecCmdSSP2 (1 -> | -> 112 `i & -> . _stStateSSP2 1 `i -> 15 `i `uc ]
+"288
+[; ;st7032.c: 288:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"290
+[; ;st7032.c: 290:     vExecCmdSSP2((0b01011000) | (stStateSSP2.u8Settings >> 4));
+[e ( _vExecCmdSSP2 (1 -> | -> 88 `i >> -> . _stStateSSP2 1 `i -> 4 `i `uc ]
+"291
+[; ;st7032.c: 291:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"293
+[; ;st7032.c: 293:     vExecCmdEndSSP2((0b00111000));
+[e ( _vExecCmdEndSSP2 (1 -> -> 56 `i `uc ]
+"294
+[; ;st7032.c: 294:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"295
+[; ;st7032.c: 295: }
+[e :UE 359 ]
+}
+"312
+[; ;st7032.c: 312: extern void ST7032_vClearDispSSP1() {
+[v _ST7032_vClearDispSSP1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vClearDispSSP1 ]
+[f ]
+"314
+[; ;st7032.c: 314:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"316
+[; ;st7032.c: 316:     vExecCmdEndSSP1((0b00000001));
+[e ( _vExecCmdEndSSP1 (1 -> -> 1 `i `uc ]
+"318
+[; ;st7032.c: 318:     stStateSSP1.u8CursorPos = 0;
+[e = . _stStateSSP1 0 -> -> 0 `i `uc ]
+"319
+[; ;st7032.c: 319:     _delay((unsigned long)(((1080))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1080 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"320
+[; ;st7032.c: 320: }
+[e :UE 361 ]
+}
+"337
+[; ;st7032.c: 337: extern void ST7032_vClearDispSSP2() {
+[v _ST7032_vClearDispSSP2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vClearDispSSP2 ]
+[f ]
+"339
+[; ;st7032.c: 339:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"341
+[; ;st7032.c: 341:     vExecCmdEndSSP2((0b00000001));
+[e ( _vExecCmdEndSSP2 (1 -> -> 1 `i `uc ]
+"343
+[; ;st7032.c: 343:     stStateSSP2.u8CursorPos = 0;
+[e = . _stStateSSP2 0 -> -> 0 `i `uc ]
+"344
+[; ;st7032.c: 344:     _delay((unsigned long)(((1080))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1080 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"345
+[; ;st7032.c: 345: }
+[e :UE 362 ]
+}
+"362
+[; ;st7032.c: 362: extern void ST7032_vClearIconSSP1() {
+[v _ST7032_vClearIconSSP1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vClearIconSSP1 ]
+[f ]
+"364
+[; ;st7032.c: 364:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"366
+[; ;st7032.c: 366:     vExecCmdSSP1((0b00111001));
+[e ( _vExecCmdSSP1 (1 -> -> 57 `i `uc ]
+"367
+[; ;st7032.c: 367:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"369
+[; ;st7032.c: 369:     vExecCmdSSP1((0b01000000));
+[e ( _vExecCmdSSP1 (1 -> -> 64 `i `uc ]
+"370
+[; ;st7032.c: 370:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"372
+[; ;st7032.c: 372:     vExecCmdEndSSP1((0b00111000));
+[e ( _vExecCmdEndSSP1 (1 -> -> 56 `i `uc ]
+"373
+[; ;st7032.c: 373:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"375
+[; ;st7032.c: 375:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"377
+[; ;st7032.c: 377:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"379
+[; ;st7032.c: 379:     unsigned char u8Addr;
+[v _u8Addr `uc ~T0 @X0 1 a ]
+"380
+[; ;st7032.c: 380:     for (u8Addr = 0x00; u8Addr < 0x10; u8Addr++) {
+{
+[e = _u8Addr -> -> 0 `i `uc ]
+[e $ < -> _u8Addr `i -> 16 `i 364  ]
+[e $U 365  ]
+[e :U 364 ]
+{
+"381
+[; ;st7032.c: 381:         I2C_u8MstTxSSP1(0x00);
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 0 `i `uc ]
+"382
+[; ;st7032.c: 382:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"383
+[; ;st7032.c: 383:     }
+}
+[e ++ _u8Addr -> -> 1 `i `uc ]
+[e $ < -> _u8Addr `i -> 16 `i 364  ]
+[e :U 365 ]
+}
+"385
+[; ;st7032.c: 385:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"388
+[; ;st7032.c: 388:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"390
+[; ;st7032.c: 390:     bSetCursorSSP1(stStateSSP1.u8CursorPos);
+[e ( _bSetCursorSSP1 (1 . _stStateSSP1 0 ]
+"391
+[; ;st7032.c: 391: }
+[e :UE 363 ]
+}
+"408
+[; ;st7032.c: 408: extern void ST7032_vClearIconSSP2() {
+[v _ST7032_vClearIconSSP2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_vClearIconSSP2 ]
+[f ]
+"410
+[; ;st7032.c: 410:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"412
+[; ;st7032.c: 412:     vExecCmdSSP2((0b00111001));
+[e ( _vExecCmdSSP2 (1 -> -> 57 `i `uc ]
+"413
+[; ;st7032.c: 413:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"415
+[; ;st7032.c: 415:     vExecCmdSSP2((0b01000000));
+[e ( _vExecCmdSSP2 (1 -> -> 64 `i `uc ]
+"416
+[; ;st7032.c: 416:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"418
+[; ;st7032.c: 418:     vExecCmdEndSSP2((0b00111000));
+[e ( _vExecCmdEndSSP2 (1 -> -> 56 `i `uc ]
+"419
+[; ;st7032.c: 419:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"421
+[; ;st7032.c: 421:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"423
+[; ;st7032.c: 423:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"425
+[; ;st7032.c: 425:     unsigned char u8Addr;
+[v _u8Addr `uc ~T0 @X0 1 a ]
+"426
+[; ;st7032.c: 426:     for (u8Addr = 0x00; u8Addr < 0x10; u8Addr++) {
+{
+[e = _u8Addr -> -> 0 `i `uc ]
+[e $ < -> _u8Addr `i -> 16 `i 368  ]
+[e $U 369  ]
+[e :U 368 ]
+{
+"427
+[; ;st7032.c: 427:         I2C_u8MstTxSSP2(0x00);
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 0 `i `uc ]
+"428
+[; ;st7032.c: 428:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"429
+[; ;st7032.c: 429:     }
+}
+[e ++ _u8Addr -> -> 1 `i `uc ]
+[e $ < -> _u8Addr `i -> 16 `i 368  ]
+[e :U 369 ]
+}
+"431
+[; ;st7032.c: 431:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"433
+[; ;st7032.c: 433:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"435
+[; ;st7032.c: 435:     bSetCursorSSP2(stStateSSP2.u8CursorPos);
+[e ( _bSetCursorSSP2 (1 . _stStateSSP2 0 ]
+"436
+[; ;st7032.c: 436: }
+[e :UE 367 ]
+}
+"454
+[; ;st7032.c: 454: extern void ST7032_vDispIconSSP1(unsigned char bDisp) {
+[v _ST7032_vDispIconSSP1 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vDispIconSSP1 ]
+[v _bDisp `uc ~T0 @X0 1 r1 ]
+[f ]
+"456
+[; ;st7032.c: 456:     if ((stStateSSP1.u8Settings >> 7) == bDisp) {
+[e $ ! == >> -> . _stStateSSP1 1 `i -> 7 `i -> _bDisp `i 372  ]
+{
+"457
+[; ;st7032.c: 457:         return;
+[e $UE 371  ]
+"458
+[; ;st7032.c: 458:     }
+}
+[e :U 372 ]
+"460
+[; ;st7032.c: 460:     stStateSSP1.u8Settings = (stStateSSP1.u8Settings & 0x7F) | (bDisp << 7);
+[e = . _stStateSSP1 1 -> | & -> . _stStateSSP1 1 `i -> 127 `i << -> _bDisp `i -> 7 `i `uc ]
+"462
+[; ;st7032.c: 462:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"464
+[; ;st7032.c: 464:     vExecCmdSSP1((0b00111001));
+[e ( _vExecCmdSSP1 (1 -> -> 57 `i `uc ]
+"465
+[; ;st7032.c: 465:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"467
+[; ;st7032.c: 467:     vExecCmdSSP1((0b01011000) | (stStateSSP1.u8Settings >> 4));
+[e ( _vExecCmdSSP1 (1 -> | -> 88 `i >> -> . _stStateSSP1 1 `i -> 4 `i `uc ]
+"468
+[; ;st7032.c: 468:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"470
+[; ;st7032.c: 470:     vExecCmdSSP1((0b00111000));
+[e ( _vExecCmdSSP1 (1 -> -> 56 `i `uc ]
+"471
+[; ;st7032.c: 471:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"472
+[; ;st7032.c: 472: }
+[e :UE 371 ]
+}
+"490
+[; ;st7032.c: 490: extern void ST7032_vDispIconSSP2(unsigned char bDisp) {
+[v _ST7032_vDispIconSSP2 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vDispIconSSP2 ]
+[v _bDisp `uc ~T0 @X0 1 r1 ]
+[f ]
+"492
+[; ;st7032.c: 492:     if ((stStateSSP2.u8Settings >> 7) == bDisp) {
+[e $ ! == >> -> . _stStateSSP2 1 `i -> 7 `i -> _bDisp `i 374  ]
+{
+"493
+[; ;st7032.c: 493:         return;
+[e $UE 373  ]
+"494
+[; ;st7032.c: 494:     }
+}
+[e :U 374 ]
+"496
+[; ;st7032.c: 496:     stStateSSP2.u8Settings = (stStateSSP2.u8Settings & 0x7F) | (bDisp << 7);
+[e = . _stStateSSP2 1 -> | & -> . _stStateSSP2 1 `i -> 127 `i << -> _bDisp `i -> 7 `i `uc ]
+"498
+[; ;st7032.c: 498:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"500
+[; ;st7032.c: 500:     vExecCmdSSP2((0b00111001));
+[e ( _vExecCmdSSP2 (1 -> -> 57 `i `uc ]
+"501
+[; ;st7032.c: 501:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"503
+[; ;st7032.c: 503:     vExecCmdSSP2((0b01011000) | (stStateSSP2.u8Settings >> 4));
+[e ( _vExecCmdSSP2 (1 -> | -> 88 `i >> -> . _stStateSSP2 1 `i -> 4 `i `uc ]
+"504
+[; ;st7032.c: 504:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"506
+[; ;st7032.c: 506:     vExecCmdSSP2((0b00111000));
+[e ( _vExecCmdSSP2 (1 -> -> 56 `i `uc ]
+"507
+[; ;st7032.c: 507:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"508
+[; ;st7032.c: 508: }
+[e :UE 373 ]
+}
+"528
+[; ;st7032.c: 528: extern void ST7032_vDispSettingSSP1(unsigned char bDisp, unsigned char bCursor, unsigned char bBlink) {
+[v _ST7032_vDispSettingSSP1 `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _ST7032_vDispSettingSSP1 ]
+[v _bDisp `uc ~T0 @X0 1 r1 ]
+[v _bCursor `uc ~T0 @X0 1 r2 ]
+[v _bBlink `uc ~T0 @X0 1 r3 ]
+[f ]
+"530
+[; ;st7032.c: 530:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"532
+[; ;st7032.c: 532:     vExecCmdEndSSP1((0b00001000) | (bDisp << 2) | (bCursor << 1) | bBlink);
+[e ( _vExecCmdEndSSP1 (1 -> | | | -> 8 `i << -> _bDisp `i -> 2 `i << -> _bCursor `i -> 1 `i -> _bBlink `i `uc ]
+"533
+[; ;st7032.c: 533:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"534
+[; ;st7032.c: 534: }
+[e :UE 375 ]
+}
+"554
+[; ;st7032.c: 554: extern void ST7032_vDispSettingSSP2(unsigned char bDisp, unsigned char bCursor, unsigned char bBlink) {
+[v _ST7032_vDispSettingSSP2 `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _ST7032_vDispSettingSSP2 ]
+[v _bDisp `uc ~T0 @X0 1 r1 ]
+[v _bCursor `uc ~T0 @X0 1 r2 ]
+[v _bBlink `uc ~T0 @X0 1 r3 ]
+[f ]
+"556
+[; ;st7032.c: 556:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"558
+[; ;st7032.c: 558:     vExecCmdEndSSP2((0b00001000) | (bDisp << 2) | (bCursor << 1) | bBlink);
+[e ( _vExecCmdEndSSP2 (1 -> | | | -> 8 `i << -> _bDisp `i -> 2 `i << -> _bCursor `i -> 1 `i -> _bBlink `i `uc ]
+"559
+[; ;st7032.c: 559:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"560
+[; ;st7032.c: 560: }
+[e :UE 376 ]
+}
+"578
+[; ;st7032.c: 578: extern unsigned char ST7032_u8GetCursorRowNoSSP1() {
+[v _ST7032_u8GetCursorRowNoSSP1 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_u8GetCursorRowNoSSP1 ]
+[f ]
+"579
+[; ;st7032.c: 579:     return stStateSSP1.u8CursorPos / 40;
+[e ) -> / -> . _stStateSSP1 0 `i -> 40 `i `uc ]
+[e $UE 377  ]
+"580
+[; ;st7032.c: 580: }
+[e :UE 377 ]
+}
+"598
+[; ;st7032.c: 598: extern unsigned char ST7032_u8GetCursorRowNoSSP2() {
+[v _ST7032_u8GetCursorRowNoSSP2 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_u8GetCursorRowNoSSP2 ]
+[f ]
+"599
+[; ;st7032.c: 599:     return stStateSSP2.u8CursorPos / 40;
+[e ) -> / -> . _stStateSSP2 0 `i -> 40 `i `uc ]
+[e $UE 378  ]
+"600
+[; ;st7032.c: 600: }
+[e :UE 378 ]
+}
+"618
+[; ;st7032.c: 618: extern unsigned char ST7032_u8GetCursorColNoSSP1() {
+[v _ST7032_u8GetCursorColNoSSP1 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_u8GetCursorColNoSSP1 ]
+[f ]
+"619
+[; ;st7032.c: 619:     return stStateSSP1.u8CursorPos % 40;
+[e ) -> % -> . _stStateSSP1 0 `i -> 40 `i `uc ]
+[e $UE 379  ]
+"620
+[; ;st7032.c: 620: }
+[e :UE 379 ]
+}
+"638
+[; ;st7032.c: 638: extern unsigned char ST7032_u8GetCursorColNoSSP2() {
+[v _ST7032_u8GetCursorColNoSSP2 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_u8GetCursorColNoSSP2 ]
+[f ]
+"639
+[; ;st7032.c: 639:     return stStateSSP2.u8CursorPos % 40;
+[e ) -> % -> . _stStateSSP2 0 `i -> 40 `i `uc ]
+[e $UE 380  ]
+"640
+[; ;st7032.c: 640: }
+[e :UE 380 ]
+}
+"661
+[; ;st7032.c: 661: extern unsigned char ST7032_bSetCursorSSP1(unsigned char u8RowNo, unsigned char u8ColNo) {
+[v _ST7032_bSetCursorSSP1 `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ST7032_bSetCursorSSP1 ]
+[v _u8RowNo `uc ~T0 @X0 1 r1 ]
+[v _u8ColNo `uc ~T0 @X0 1 r2 ]
+[f ]
+"663
+[; ;st7032.c: 663:     if (u8RowNo > (1) || u8ColNo > (39)) {
+[e $ ! || > -> _u8RowNo `i -> 1 `i > -> _u8ColNo `i -> 39 `i 382  ]
+{
+"664
+[; ;st7032.c: 664:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 381  ]
+"665
+[; ;st7032.c: 665:     }
+}
+[e :U 382 ]
+"667
+[; ;st7032.c: 667:     unsigned char u8Addr = (u8RowNo * 40) + u8ColNo;
+[v _u8Addr `uc ~T0 @X0 1 a ]
+[e = _u8Addr -> + * -> _u8RowNo `i -> 40 `i -> _u8ColNo `i `uc ]
+"668
+[; ;st7032.c: 668:     if (u8Addr == stStateSSP1.u8CursorPos) {
+[e $ ! == -> _u8Addr `i -> . _stStateSSP1 0 `i 383  ]
+{
+"669
+[; ;st7032.c: 669:         return (1);
+[e ) -> -> 1 `i `uc ]
+[e $UE 381  ]
+"670
+[; ;st7032.c: 670:     }
+}
+[e :U 383 ]
+"672
+[; ;st7032.c: 672:     return bSetCursorSSP1(u8Addr);
+[e ) ( _bSetCursorSSP1 (1 _u8Addr ]
+[e $UE 381  ]
+"673
+[; ;st7032.c: 673: }
+[e :UE 381 ]
+}
+"693
+[; ;st7032.c: 693: extern unsigned char ST7032_bSetCursorSSP2(unsigned char u8RowNo, unsigned char u8ColNo) {
+[v _ST7032_bSetCursorSSP2 `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ST7032_bSetCursorSSP2 ]
+[v _u8RowNo `uc ~T0 @X0 1 r1 ]
+[v _u8ColNo `uc ~T0 @X0 1 r2 ]
+[f ]
+"695
+[; ;st7032.c: 695:     if (u8RowNo > (1) || u8ColNo > (39)) {
+[e $ ! || > -> _u8RowNo `i -> 1 `i > -> _u8ColNo `i -> 39 `i 385  ]
+{
+"696
+[; ;st7032.c: 696:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 384  ]
+"697
+[; ;st7032.c: 697:     }
+}
+[e :U 385 ]
+"699
+[; ;st7032.c: 699:     unsigned char u8Addr = (u8RowNo * 40) + u8ColNo;
+[v _u8Addr `uc ~T0 @X0 1 a ]
+[e = _u8Addr -> + * -> _u8RowNo `i -> 40 `i -> _u8ColNo `i `uc ]
+"700
+[; ;st7032.c: 700:     if (u8Addr == stStateSSP2.u8CursorPos) {
+[e $ ! == -> _u8Addr `i -> . _stStateSSP2 0 `i 386  ]
+{
+"701
+[; ;st7032.c: 701:         return (1);
+[e ) -> -> 1 `i `uc ]
+[e $UE 384  ]
+"702
+[; ;st7032.c: 702:     }
+}
+[e :U 386 ]
+"704
+[; ;st7032.c: 704:     return bSetCursorSSP2(u8Addr);
+[e ) ( _bSetCursorSSP2 (1 _u8Addr ]
+[e $UE 384  ]
+"705
+[; ;st7032.c: 705: }
+[e :UE 384 ]
+}
+"723
+[; ;st7032.c: 723: extern unsigned char ST7032_bCursorLeftSSP1() {
+[v _ST7032_bCursorLeftSSP1 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_bCursorLeftSSP1 ]
+[f ]
+"725
+[; ;st7032.c: 725:     if (stStateSSP1.u8CursorPos == 0) {
+[e $ ! == -> . _stStateSSP1 0 `i -> 0 `i 388  ]
+{
+"726
+[; ;st7032.c: 726:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 387  ]
+"727
+[; ;st7032.c: 727:     }
+}
+[e :U 388 ]
+"728
+[; ;st7032.c: 728:     return bSetCursorSSP1(stStateSSP1.u8CursorPos - 1);
+[e ) ( _bSetCursorSSP1 (1 -> - -> . _stStateSSP1 0 `i -> 1 `i `uc ]
+[e $UE 387  ]
+"729
+[; ;st7032.c: 729: }
+[e :UE 387 ]
+}
+"747
+[; ;st7032.c: 747: extern unsigned char ST7032_bCursorLeftSSP2() {
+[v _ST7032_bCursorLeftSSP2 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_bCursorLeftSSP2 ]
+[f ]
+"749
+[; ;st7032.c: 749:     if (stStateSSP2.u8CursorPos == 0) {
+[e $ ! == -> . _stStateSSP2 0 `i -> 0 `i 390  ]
+{
+"750
+[; ;st7032.c: 750:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 389  ]
+"751
+[; ;st7032.c: 751:     }
+}
+[e :U 390 ]
+"752
+[; ;st7032.c: 752:     return bSetCursorSSP2(stStateSSP2.u8CursorPos - 1);
+[e ) ( _bSetCursorSSP2 (1 -> - -> . _stStateSSP2 0 `i -> 1 `i `uc ]
+[e $UE 389  ]
+"753
+[; ;st7032.c: 753: }
+[e :UE 389 ]
+}
+"771
+[; ;st7032.c: 771: extern unsigned char ST7032_bCursorRightSSP1() {
+[v _ST7032_bCursorRightSSP1 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_bCursorRightSSP1 ]
+[f ]
+"773
+[; ;st7032.c: 773:     if (stStateSSP1.u8CursorPos >= 79) {
+[e $ ! >= -> . _stStateSSP1 0 `i -> 79 `i 392  ]
+{
+"774
+[; ;st7032.c: 774:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 391  ]
+"775
+[; ;st7032.c: 775:     }
+}
+[e :U 392 ]
+"776
+[; ;st7032.c: 776:     return bSetCursorSSP1(stStateSSP1.u8CursorPos + 1);
+[e ) ( _bSetCursorSSP1 (1 -> + -> . _stStateSSP1 0 `i -> 1 `i `uc ]
+[e $UE 391  ]
+"777
+[; ;st7032.c: 777: }
+[e :UE 391 ]
+}
+"795
+[; ;st7032.c: 795: extern unsigned char ST7032_bCursorRightSSP2() {
+[v _ST7032_bCursorRightSSP2 `(uc ~T0 @X0 1 ef ]
+{
+[e :U _ST7032_bCursorRightSSP2 ]
+[f ]
+"797
+[; ;st7032.c: 797:     if (stStateSSP2.u8CursorPos >= 79) {
+[e $ ! >= -> . _stStateSSP2 0 `i -> 79 `i 394  ]
+{
+"798
+[; ;st7032.c: 798:         return (0);
+[e ) -> -> 0 `i `uc ]
+[e $UE 393  ]
+"799
+[; ;st7032.c: 799:     }
+}
+[e :U 394 ]
+"800
+[; ;st7032.c: 800:     return bSetCursorSSP2(stStateSSP2.u8CursorPos + 1);
+[e ) ( _bSetCursorSSP2 (1 -> + -> . _stStateSSP2 0 `i -> 1 `i `uc ]
+[e $UE 393  ]
+"801
+[; ;st7032.c: 801: }
+[e :UE 393 ]
+}
+"820
+[; ;st7032.c: 820: extern void ST7032_vWriteCGRAMSSP1(unsigned char u8CharNo, unsigned char* pu8BitMap) {
+[v _ST7032_vWriteCGRAMSSP1 `(v ~T0 @X0 1 ef2`uc`*uc ]
+{
+[e :U _ST7032_vWriteCGRAMSSP1 ]
+[v _u8CharNo `uc ~T0 @X0 1 r1 ]
+[v _pu8BitMap `*uc ~T0 @X0 1 r2 ]
+[f ]
+"822
+[; ;st7032.c: 822:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"824
+[; ;st7032.c: 824:     vExecCmdSSP1((0b00111000));
+[e ( _vExecCmdSSP1 (1 -> -> 56 `i `uc ]
+"825
+[; ;st7032.c: 825:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"827
+[; ;st7032.c: 827:     vExecCmdSSP1((0b01000000) | ((u8CharNo << 3) & 0x38));
+[e ( _vExecCmdSSP1 (1 -> | -> 64 `i & << -> _u8CharNo `i -> 3 `i -> 56 `i `uc ]
+"828
+[; ;st7032.c: 828:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"830
+[; ;st7032.c: 830:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"832
+[; ;st7032.c: 832:     unsigned char *pu8WkMap = pu8BitMap;
+[v _pu8WkMap `*uc ~T0 @X0 1 a ]
+[e = _pu8WkMap _pu8BitMap ]
+"833
+[; ;st7032.c: 833:     unsigned char u8Idx;
+[v _u8Idx `uc ~T0 @X0 1 a ]
+"834
+[; ;st7032.c: 834:     for (u8Idx = 0; u8Idx < 8; u8Idx++) {
+{
+[e = _u8Idx -> -> 0 `i `uc ]
+[e $ < -> _u8Idx `i -> 8 `i 396  ]
+[e $U 397  ]
+[e :U 396 ]
+{
+"835
+[; ;st7032.c: 835:         I2C_u8MstTxSSP1(*pu8WkMap & 0x1F);
+[e ( _I2C_u8MstTxSSP1 (1 -> & -> *U _pu8WkMap `i -> 31 `i `uc ]
+"836
+[; ;st7032.c: 836:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"837
+[; ;st7032.c: 837:         pu8WkMap++;
+[e ++ _pu8WkMap * -> -> 1 `i `x -> -> # *U _pu8WkMap `i `x ]
+"838
+[; ;st7032.c: 838:     }
+}
+[e ++ _u8Idx -> -> 1 `i `uc ]
+[e $ < -> _u8Idx `i -> 8 `i 396  ]
+[e :U 397 ]
+}
+"840
+[; ;st7032.c: 840:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"842
+[; ;st7032.c: 842:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"844
+[; ;st7032.c: 844:     bSetCursorSSP1(stStateSSP1.u8CursorPos);
+[e ( _bSetCursorSSP1 (1 . _stStateSSP1 0 ]
+"845
+[; ;st7032.c: 845: }
+[e :UE 395 ]
+}
+"864
+[; ;st7032.c: 864: extern void ST7032_vWriteCGRAMSSP2(unsigned char u8CharNo, unsigned char* pu8BitMap) {
+[v _ST7032_vWriteCGRAMSSP2 `(v ~T0 @X0 1 ef2`uc`*uc ]
+{
+[e :U _ST7032_vWriteCGRAMSSP2 ]
+[v _u8CharNo `uc ~T0 @X0 1 r1 ]
+[v _pu8BitMap `*uc ~T0 @X0 1 r2 ]
+[f ]
+"866
+[; ;st7032.c: 866:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"868
+[; ;st7032.c: 868:     vExecCmdSSP2((0b00111000));
+[e ( _vExecCmdSSP2 (1 -> -> 56 `i `uc ]
+"869
+[; ;st7032.c: 869:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"871
+[; ;st7032.c: 871:     vExecCmdSSP2((0b01000000) | ((u8CharNo << 3) & 0x38));
+[e ( _vExecCmdSSP2 (1 -> | -> 64 `i & << -> _u8CharNo `i -> 3 `i -> 56 `i `uc ]
+"872
+[; ;st7032.c: 872:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"874
+[; ;st7032.c: 874:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"876
+[; ;st7032.c: 876:     unsigned char *pu8WkMap = pu8BitMap;
+[v _pu8WkMap `*uc ~T0 @X0 1 a ]
+[e = _pu8WkMap _pu8BitMap ]
+"877
+[; ;st7032.c: 877:     unsigned char u8Idx;
+[v _u8Idx `uc ~T0 @X0 1 a ]
+"878
+[; ;st7032.c: 878:     for (u8Idx = 0; u8Idx < 8; u8Idx++) {
+{
+[e = _u8Idx -> -> 0 `i `uc ]
+[e $ < -> _u8Idx `i -> 8 `i 400  ]
+[e $U 401  ]
+[e :U 400 ]
+{
+"879
+[; ;st7032.c: 879:         I2C_u8MstTxSSP2(*pu8WkMap & 0x1F);
+[e ( _I2C_u8MstTxSSP2 (1 -> & -> *U _pu8WkMap `i -> 31 `i `uc ]
+"880
+[; ;st7032.c: 880:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"881
+[; ;st7032.c: 881:         pu8WkMap++;
+[e ++ _pu8WkMap * -> -> 1 `i `x -> -> # *U _pu8WkMap `i `x ]
+"882
+[; ;st7032.c: 882:     }
+}
+[e ++ _u8Idx -> -> 1 `i `uc ]
+[e $ < -> _u8Idx `i -> 8 `i 400  ]
+[e :U 401 ]
+}
+"884
+[; ;st7032.c: 884:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"886
+[; ;st7032.c: 886:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"888
+[; ;st7032.c: 888:     bSetCursorSSP2(stStateSSP2.u8CursorPos);
+[e ( _bSetCursorSSP2 (1 . _stStateSSP2 0 ]
+"889
+[; ;st7032.c: 889: }
+[e :UE 399 ]
+}
+"907
+[; ;st7032.c: 907: extern void ST7032_vWriteCharSSP1(char cData) {
+[v _ST7032_vWriteCharSSP1 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vWriteCharSSP1 ]
+[v _cData `uc ~T0 @X0 1 r1 ]
+[f ]
+"909
+[; ;st7032.c: 909:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"911
+[; ;st7032.c: 911:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"913
+[; ;st7032.c: 913:     I2C_u8MstTxSSP1(cData);
+[e ( _I2C_u8MstTxSSP1 (1 -> _cData `uc ]
+"915
+[; ;st7032.c: 915:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"917
+[; ;st7032.c: 917:     stStateSSP1.u8CursorPos = (stStateSSP1.u8CursorPos + 1) % 80;
+[e = . _stStateSSP1 0 -> % + -> . _stStateSSP1 0 `i -> 1 `i -> 80 `i `uc ]
+"918
+[; ;st7032.c: 918: }
+[e :UE 403 ]
+}
+"936
+[; ;st7032.c: 936: extern void ST7032_vWriteCharSSP2(char cData) {
+[v _ST7032_vWriteCharSSP2 `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ST7032_vWriteCharSSP2 ]
+[v _cData `uc ~T0 @X0 1 r1 ]
+[f ]
+"938
+[; ;st7032.c: 938:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"940
+[; ;st7032.c: 940:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"942
+[; ;st7032.c: 942:     I2C_u8MstTxSSP2(cData);
+[e ( _I2C_u8MstTxSSP2 (1 -> _cData `uc ]
+"944
+[; ;st7032.c: 944:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"946
+[; ;st7032.c: 946:     stStateSSP2.u8CursorPos = (stStateSSP2.u8CursorPos + 1) % 80;
+[e = . _stStateSSP2 0 -> % + -> . _stStateSSP2 0 `i -> 1 `i -> 80 `i `uc ]
+"947
+[; ;st7032.c: 947: }
+[e :UE 404 ]
+}
+"965
+[; ;st7032.c: 965: extern void ST7032_vWriteStringSSP1(char* pcStr) {
+[v _ST7032_vWriteStringSSP1 `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _ST7032_vWriteStringSSP1 ]
+[v _pcStr `*uc ~T0 @X0 1 r1 ]
+[f ]
+"967
+[; ;st7032.c: 967:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"969
+[; ;st7032.c: 969:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"971
+[; ;st7032.c: 971:     char* pcWkData = pcStr;
+[v _pcWkData `*uc ~T0 @X0 1 a ]
+[e = _pcWkData _pcStr ]
+"972
+[; ;st7032.c: 972:     while (*pcWkData != '\0') {
+[e $U 406  ]
+[e :U 407 ]
+{
+"973
+[; ;st7032.c: 973:         I2C_u8MstTxSSP1(*pcWkData);
+[e ( _I2C_u8MstTxSSP1 (1 -> *U _pcWkData `uc ]
+"974
+[; ;st7032.c: 974:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"975
+[; ;st7032.c: 975:         pcWkData++;
+[e ++ _pcWkData * -> -> 1 `i `x -> -> # *U _pcWkData `i `x ]
+"976
+[; ;st7032.c: 976:     }
+}
+[e :U 406 ]
+"972
+[; ;st7032.c: 972:     while (*pcWkData != '\0') {
+[e $ != -> *U _pcWkData `ui -> 0 `ui 407  ]
+[e :U 408 ]
+"978
+[; ;st7032.c: 978:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"980
+[; ;st7032.c: 980:     stStateSSP1.u8CursorPos =
+[e = . _stStateSSP1 0 -> % + -> . _stStateSSP1 0 `i / - -> _pcWkData `x -> _pcStr `x -> -> # *U _pcWkData `i `x -> 80 `i `uc ]
+"982
+[; ;st7032.c: 982: }
+[e :UE 405 ]
+}
+"1000
+[; ;st7032.c: 1000: extern void ST7032_vWriteStringSSP2(char* pcStr) {
+[v _ST7032_vWriteStringSSP2 `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _ST7032_vWriteStringSSP2 ]
+[v _pcStr `*uc ~T0 @X0 1 r1 ]
+[f ]
+"1002
+[; ;st7032.c: 1002:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1004
+[; ;st7032.c: 1004:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"1006
+[; ;st7032.c: 1006:     char* pcWkData = pcStr;
+[v _pcWkData `*uc ~T0 @X0 1 a ]
+[e = _pcWkData _pcStr ]
+"1007
+[; ;st7032.c: 1007:     while (*pcWkData != '\0') {
+[e $U 410  ]
+[e :U 411 ]
+{
+"1008
+[; ;st7032.c: 1008:         I2C_u8MstTxSSP2(*pcWkData);
+[e ( _I2C_u8MstTxSSP2 (1 -> *U _pcWkData `uc ]
+"1009
+[; ;st7032.c: 1009:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1010
+[; ;st7032.c: 1010:         pcWkData++;
+[e ++ _pcWkData * -> -> 1 `i `x -> -> # *U _pcWkData `i `x ]
+"1011
+[; ;st7032.c: 1011:     }
+}
+[e :U 410 ]
+"1007
+[; ;st7032.c: 1007:     while (*pcWkData != '\0') {
+[e $ != -> *U _pcWkData `ui -> 0 `ui 411  ]
+[e :U 412 ]
+"1013
+[; ;st7032.c: 1013:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"1015
+[; ;st7032.c: 1015:     stStateSSP2.u8CursorPos =
+[e = . _stStateSSP2 0 -> % + -> . _stStateSSP2 0 `i / - -> _pcWkData `x -> _pcStr `x -> -> # *U _pcWkData `i `x -> 80 `i `uc ]
+"1017
+[; ;st7032.c: 1017: }
+[e :UE 409 ]
+}
+"1036
+[; ;st7032.c: 1036: extern void ST7032_vWriteDataSSP1(unsigned char* pcData, unsigned char u8Len) {
+[v _ST7032_vWriteDataSSP1 `(v ~T0 @X0 1 ef2`*uc`uc ]
+{
+[e :U _ST7032_vWriteDataSSP1 ]
+[v _pcData `*uc ~T0 @X0 1 r1 ]
+[v _u8Len `uc ~T0 @X0 1 r2 ]
+[f ]
+"1038
+[; ;st7032.c: 1038:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1040
+[; ;st7032.c: 1040:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"1042
+[; ;st7032.c: 1042:     unsigned char* pu8WkData = pcData;
+[v _pu8WkData `*uc ~T0 @X0 1 a ]
+[e = _pu8WkData _pcData ]
+"1043
+[; ;st7032.c: 1043:     unsigned char u8Idx;
+[v _u8Idx `uc ~T0 @X0 1 a ]
+"1044
+[; ;st7032.c: 1044:     for (u8Idx = 0; u8Idx < u8Len; u8Idx++) {
+{
+[e = _u8Idx -> -> 0 `i `uc ]
+[e $U 417  ]
+[e :U 414 ]
+{
+"1045
+[; ;st7032.c: 1045:         I2C_u8MstTxSSP1(*pu8WkData);
+[e ( _I2C_u8MstTxSSP1 (1 *U _pu8WkData ]
+"1046
+[; ;st7032.c: 1046:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1047
+[; ;st7032.c: 1047:         pu8WkData++;
+[e ++ _pu8WkData * -> -> 1 `i `x -> -> # *U _pu8WkData `i `x ]
+"1048
+[; ;st7032.c: 1048:     }
+}
+[e ++ _u8Idx -> -> 1 `i `uc ]
+[e :U 417 ]
+[e $ < -> _u8Idx `i -> _u8Len `i 414  ]
+[e :U 415 ]
+}
+"1050
+[; ;st7032.c: 1050:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"1052
+[; ;st7032.c: 1052:     stStateSSP1.u8CursorPos =
+[e = . _stStateSSP1 0 -> % + -> . _stStateSSP1 0 `i / - -> _pu8WkData `x -> _pcData `x -> -> # *U _pu8WkData `i `x -> 80 `i `uc ]
+"1054
+[; ;st7032.c: 1054: }
+[e :UE 413 ]
+}
+"1073
+[; ;st7032.c: 1073: extern void ST7032_vWriteDataSSP2(unsigned char* pcData, unsigned char u8Len) {
+[v _ST7032_vWriteDataSSP2 `(v ~T0 @X0 1 ef2`*uc`uc ]
+{
+[e :U _ST7032_vWriteDataSSP2 ]
+[v _pcData `*uc ~T0 @X0 1 r1 ]
+[v _u8Len `uc ~T0 @X0 1 r2 ]
+[f ]
+"1075
+[; ;st7032.c: 1075:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1077
+[; ;st7032.c: 1077:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"1079
+[; ;st7032.c: 1079:     unsigned char* pu8WkData = pcData;
+[v _pu8WkData `*uc ~T0 @X0 1 a ]
+[e = _pu8WkData _pcData ]
+"1080
+[; ;st7032.c: 1080:     unsigned char u8Idx;
+[v _u8Idx `uc ~T0 @X0 1 a ]
+"1081
+[; ;st7032.c: 1081:     for (u8Idx = 0; u8Idx < u8Len; u8Idx++) {
+{
+[e = _u8Idx -> -> 0 `i `uc ]
+[e $U 422  ]
+[e :U 419 ]
+{
+"1082
+[; ;st7032.c: 1082:         I2C_u8MstTxSSP2(*pu8WkData);
+[e ( _I2C_u8MstTxSSP2 (1 *U _pu8WkData ]
+"1083
+[; ;st7032.c: 1083:         _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1084
+[; ;st7032.c: 1084:         pu8WkData++;
+[e ++ _pu8WkData * -> -> 1 `i `x -> -> # *U _pu8WkData `i `x ]
+"1085
+[; ;st7032.c: 1085:     }
+}
+[e ++ _u8Idx -> -> 1 `i `uc ]
+[e :U 422 ]
+[e $ < -> _u8Idx `i -> _u8Len `i 419  ]
+[e :U 420 ]
+}
+"1087
+[; ;st7032.c: 1087:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"1089
+[; ;st7032.c: 1089:     stStateSSP2.u8CursorPos =
+[e = . _stStateSSP2 0 -> % + -> . _stStateSSP2 0 `i / - -> _pu8WkData `x -> _pcData `x -> -> # *U _pu8WkData `i `x -> 80 `i `uc ]
+"1091
+[; ;st7032.c: 1091: }
+[e :UE 418 ]
+}
+"1110
+[; ;st7032.c: 1110: extern void ST7032_vWriteIconSSP1(unsigned char u8Addr, unsigned char u8Map) {
+[v _ST7032_vWriteIconSSP1 `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ST7032_vWriteIconSSP1 ]
+[v _u8Addr `uc ~T0 @X0 1 r1 ]
+[v _u8Map `uc ~T0 @X0 1 r2 ]
+[f ]
+"1112
+[; ;st7032.c: 1112:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1114
+[; ;st7032.c: 1114:     vExecCmdSSP1((0b00111001));
+[e ( _vExecCmdSSP1 (1 -> -> 57 `i `uc ]
+"1115
+[; ;st7032.c: 1115:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1117
+[; ;st7032.c: 1117:     vExecCmdSSP1((0b01000000) | (u8Addr & 0x0F));
+[e ( _vExecCmdSSP1 (1 -> | -> 64 `i & -> _u8Addr `i -> 15 `i `uc ]
+"1118
+[; ;st7032.c: 1118:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1120
+[; ;st7032.c: 1120:     vExecCmdSSP1((0b00111000));
+[e ( _vExecCmdSSP1 (1 -> -> 56 `i `uc ]
+"1121
+[; ;st7032.c: 1121:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1123
+[; ;st7032.c: 1123:     I2C_u8MstTxSSP1((0x40));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 64 `i `uc ]
+"1125
+[; ;st7032.c: 1125:     I2C_u8MstTxSSP1(u8Map & 0x1F);
+[e ( _I2C_u8MstTxSSP1 (1 -> & -> _u8Map `i -> 31 `i `uc ]
+"1127
+[; ;st7032.c: 1127:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"1128
+[; ;st7032.c: 1128:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1130
+[; ;st7032.c: 1130:     bSetCursorSSP1(stStateSSP1.u8CursorPos);
+[e ( _bSetCursorSSP1 (1 . _stStateSSP1 0 ]
+"1131
+[; ;st7032.c: 1131: }
+[e :UE 423 ]
+}
+"1150
+[; ;st7032.c: 1150: extern void ST7032_vWriteIconSSP2(unsigned char u8Addr, unsigned char u8Map) {
+[v _ST7032_vWriteIconSSP2 `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ST7032_vWriteIconSSP2 ]
+[v _u8Addr `uc ~T0 @X0 1 r1 ]
+[v _u8Map `uc ~T0 @X0 1 r2 ]
+[f ]
+"1152
+[; ;st7032.c: 1152:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1154
+[; ;st7032.c: 1154:     vExecCmdSSP2((0b00111001));
+[e ( _vExecCmdSSP2 (1 -> -> 57 `i `uc ]
+"1155
+[; ;st7032.c: 1155:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1157
+[; ;st7032.c: 1157:     vExecCmdSSP2((0b01000000) | (u8Addr & 0x0F));
+[e ( _vExecCmdSSP2 (1 -> | -> 64 `i & -> _u8Addr `i -> 15 `i `uc ]
+"1158
+[; ;st7032.c: 1158:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1160
+[; ;st7032.c: 1160:     vExecCmdSSP2((0b00111000));
+[e ( _vExecCmdSSP2 (1 -> -> 56 `i `uc ]
+"1161
+[; ;st7032.c: 1161:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1163
+[; ;st7032.c: 1163:     I2C_u8MstTxSSP2((0x40));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 64 `i `uc ]
+"1165
+[; ;st7032.c: 1165:     I2C_u8MstTxSSP2(u8Map & 0x1F);
+[e ( _I2C_u8MstTxSSP2 (1 -> & -> _u8Map `i -> 31 `i `uc ]
+"1167
+[; ;st7032.c: 1167:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"1168
+[; ;st7032.c: 1168:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1170
+[; ;st7032.c: 1170:     bSetCursorSSP2(stStateSSP2.u8CursorPos);
+[e ( _bSetCursorSSP2 (1 . _stStateSSP2 0 ]
+"1171
+[; ;st7032.c: 1171: }
+[e :UE 424 ]
+}
+"1193
+[; ;st7032.c: 1193: static void vExecCmdSSP1(unsigned char u8Cmd) {
+[v _vExecCmdSSP1 `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _vExecCmdSSP1 ]
+[v _u8Cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"1195
+[; ;st7032.c: 1195:     I2C_u8MstTxSSP1((0x00) | 0x80);
+[e ( _I2C_u8MstTxSSP1 (1 -> | -> 0 `i -> 128 `i `uc ]
+"1197
+[; ;st7032.c: 1197:     I2C_u8MstTxSSP1(u8Cmd);
+[e ( _I2C_u8MstTxSSP1 (1 _u8Cmd ]
+"1198
+[; ;st7032.c: 1198: }
+[e :UE 425 ]
+}
+"1216
+[; ;st7032.c: 1216: static void vExecCmdSSP2(unsigned char u8Cmd) {
+[v _vExecCmdSSP2 `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _vExecCmdSSP2 ]
+[v _u8Cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"1218
+[; ;st7032.c: 1218:     I2C_u8MstTxSSP2((0x00) | 0x80);
+[e ( _I2C_u8MstTxSSP2 (1 -> | -> 0 `i -> 128 `i `uc ]
+"1220
+[; ;st7032.c: 1220:     I2C_u8MstTxSSP2(u8Cmd);
+[e ( _I2C_u8MstTxSSP2 (1 _u8Cmd ]
+"1221
+[; ;st7032.c: 1221: }
+[e :UE 426 ]
+}
+"1239
+[; ;st7032.c: 1239: static void vExecCmdEndSSP1(unsigned char u8Cmd) {
+[v _vExecCmdEndSSP1 `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _vExecCmdEndSSP1 ]
+[v _u8Cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"1241
+[; ;st7032.c: 1241:     I2C_u8MstTxSSP1((0x00));
+[e ( _I2C_u8MstTxSSP1 (1 -> -> 0 `i `uc ]
+"1243
+[; ;st7032.c: 1243:     I2C_u8MstTxSSP1(u8Cmd);
+[e ( _I2C_u8MstTxSSP1 (1 _u8Cmd ]
+"1245
+[; ;st7032.c: 1245:     I2C_vMstStopSSP1();
+[e ( _I2C_vMstStopSSP1 ..  ]
+"1246
+[; ;st7032.c: 1246: }
+[e :UE 427 ]
+}
+"1264
+[; ;st7032.c: 1264: static void vExecCmdEndSSP2(unsigned char u8Cmd) {
+[v _vExecCmdEndSSP2 `(v ~T0 @X0 1 sf1`uc ]
+{
+[e :U _vExecCmdEndSSP2 ]
+[v _u8Cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+"1266
+[; ;st7032.c: 1266:     I2C_u8MstTxSSP2((0x00));
+[e ( _I2C_u8MstTxSSP2 (1 -> -> 0 `i `uc ]
+"1268
+[; ;st7032.c: 1268:     I2C_u8MstTxSSP2(u8Cmd);
+[e ( _I2C_u8MstTxSSP2 (1 _u8Cmd ]
+"1270
+[; ;st7032.c: 1270:     I2C_vMstStopSSP2();
+[e ( _I2C_vMstStopSSP2 ..  ]
+"1271
+[; ;st7032.c: 1271: }
+[e :UE 428 ]
+}
+"1290
+[; ;st7032.c: 1290: static unsigned char bSetCursorSSP1(unsigned char u8Pos) {
+[v _bSetCursorSSP1 `(uc ~T0 @X0 1 sf1`uc ]
+{
+[e :U _bSetCursorSSP1 ]
+[v _u8Pos `uc ~T0 @X0 1 r1 ]
+[f ]
+"1292
+[; ;st7032.c: 1292:     stStateSSP1.u8CursorPos = u8Pos;
+[e = . _stStateSSP1 0 _u8Pos ]
+"1294
+[; ;st7032.c: 1294:     unsigned char u8Addr = (u8Pos / 40) * 0x40 + (u8Pos % 40);
+[v _u8Addr `uc ~T0 @X0 1 a ]
+[e = _u8Addr -> + * / -> _u8Pos `i -> 40 `i -> 64 `i % -> _u8Pos `i -> 40 `i `uc ]
+"1296
+[; ;st7032.c: 1296:     I2C_u8MstStartSSP1((0x3E), (0));
+[e ( _I2C_u8MstStartSSP1 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1298
+[; ;st7032.c: 1298:     vExecCmdEndSSP1((0b10000000) | (u8Addr & 0x7F));
+[e ( _vExecCmdEndSSP1 (1 -> | -> 128 `i & -> _u8Addr `i -> 127 `i `uc ]
+"1299
+[; ;st7032.c: 1299:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1301
+[; ;st7032.c: 1301:     return (1);
+[e ) -> -> 1 `i `uc ]
+[e $UE 429  ]
+"1302
+[; ;st7032.c: 1302: }
+[e :UE 429 ]
+}
+"1321
+[; ;st7032.c: 1321: static unsigned char bSetCursorSSP2(unsigned char u8Pos) {
+[v _bSetCursorSSP2 `(uc ~T0 @X0 1 sf1`uc ]
+{
+[e :U _bSetCursorSSP2 ]
+[v _u8Pos `uc ~T0 @X0 1 r1 ]
+[f ]
+"1323
+[; ;st7032.c: 1323:     stStateSSP2.u8CursorPos = u8Pos;
+[e = . _stStateSSP2 0 _u8Pos ]
+"1325
+[; ;st7032.c: 1325:     unsigned char u8Addr = (u8Pos / 40) * 0x40 + (u8Pos % 40);
+[v _u8Addr `uc ~T0 @X0 1 a ]
+[e = _u8Addr -> + * / -> _u8Pos `i -> 40 `i -> 64 `i % -> _u8Pos `i -> 40 `i `uc ]
+"1327
+[; ;st7032.c: 1327:     I2C_u8MstStartSSP2((0x3E), (0));
+[e ( _I2C_u8MstStartSSP2 (2 , -> -> 62 `i `uc -> -> 0 `i `uc ]
+"1329
+[; ;st7032.c: 1329:     vExecCmdEndSSP2((0b10000000) | (u8Addr & 0x7F));
+[e ( _vExecCmdEndSSP2 (1 -> | -> 128 `i & -> _u8Addr `i -> 127 `i `uc ]
+"1330
+[; ;st7032.c: 1330:     _delay((unsigned long)(((26))*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 26 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"1332
+[; ;st7032.c: 1332:     return (1);
+[e ) -> -> 1 `i `uc ]
+[e $UE 430  ]
+"1333
+[; ;st7032.c: 1333: }
+[e :UE 430 ]
+}

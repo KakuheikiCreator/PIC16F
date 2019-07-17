@@ -1,0 +1,2825 @@
+Microchip MPLAB XC8 Compiler V2.05 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
+  -cs -h+dist/default/production\UserLibrary.X.production.sym \
+  --cmf=dist/default/production\UserLibrary.X.production.cmf -z -Q16F1827 \
+  -oC:\Users\seeke\AppData\Local\Temp\s7bg.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/UserLibrary.X.production.map -E1 -ver=XC8 \
+  --acfsm=1493 -ASTACK=02091h-0216Fh -pstack=STACK -ACODE=00h-07FFhx2 \
+  -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
+  -AENTRY=00h-0FFhx16 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh \
+  -ABANK4=0220h-024Fh -ABIGRAM=02000h-0216Fh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-024Fh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-024Fh \
+  -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-011Fh -ASFR3=0180h-019Fh \
+  -ASFR4=0200h-021Fh -ASFR5=0280h-02EFh -ASFR6=0300h-036Fh \
+  -ASFR7=0380h-03EFh -ASFR8=0400h-046Fh -ASFR9=0480h-04EFh \
+  -ASFR10=0500h-056Fh -ASFR11=0580h-05EFh -ASFR12=0600h-066Fh \
+  -ASFR13=0680h-06EFh -ASFR14=0700h-076Fh -ASFR15=0780h-07EFh \
+  -ASFR16=0800h-086Fh -ASFR17=0880h-08EFh -ASFR18=0900h-096Fh \
+  -ASFR19=0980h-09EFh -ASFR20=0A00h-0A6Fh -ASFR21=0A80h-0AEFh \
+  -ASFR22=0B00h-0B6Fh -ASFR23=0B80h-0BEFh -ASFR24=0C00h-0C6Fh \
+  -ASFR25=0C80h-0CEFh -ASFR26=0D00h-0D6Fh -ASFR27=0D80h-0DEFh \
+  -ASFR28=0E00h-0E6Fh -ASFR29=0E80h-0EEFh -ASFR30=0F00h-0F6Fh \
+  -ASFR31=0F80h-0FEFh -preset_vec=00h,intentry=04h,init,end_init \
+  -ppowerup=CODE -pcinit=CODE -pfunctab=ENTRY -ACONFIG=08007h-08008h \
+  -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+  C:\Users\seeke\AppData\Local\Temp\s7bg.o \
+  dist/default/production\UserLibrary.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 16F1827
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\seeke\AppData\Local\Temp\s7bg.o
+                end_init                              D        D        2        8       0
+                reset_vec                             0        0        2        0       0
+                config                             8007     8007        2    1000E       0
+dist/default/production\UserLibrary.X.production.o
+                cinit                                 F        F       1F        8       0
+                intentry                              4        4        9        8       0
+                text44                                3        3        1        6       0
+                text43                              C1F      C1F       32     183E       0
+                text42                              BF3      BF3       2C     17E6       0
+                text41                              CFC      CFC       45     19F8       0
+                text40                              4F2      4F2       CD        8       0
+                text39                              A4F      A4F        7     149E       0
+                text38                              A5D      A5D        8     14BA       0
+                text37                              CBE      CBE       3E     197C       0
+                text36                              B51      B51       27     16A2       0
+                text34                              AFC      AFC       17     15F8       0
+                text33                              B9F      B9F       2A     173E       0
+                text32                              65E      65E       96        8       0
+                text31                              C51      C51       34     18A2       0
+                text30                              A65      A65        8     14CA       0
+                text29                              B13      B13       1D     1626       0
+                text28                              A6D      A6D        A     14DA       0
+                text27                              A56      A56        7     14AC       0
+                text26                              AA5      AA5        E     154A       0
+                text25                              A77      A77        B     14EE       0
+                text24                              F95      F95       6B     1F2A       0
+                text23                              AD5      AD5       12     15AA       0
+                text22                              EEF      EEF       52     1DDE       0
+                text21                              D41      D41       46     1A82       0
+                text20                              D87      D87       46     1B0E       0
+                text19                              BC9      BC9       2A     1792       0
+                text18                              AE7      AE7       15     15CE       0
+                text17                              B78      B78       27     16F0       0
+                text16                              E5C      E5C       49     1CB8       0
+                text15                              DCD      DCD       47     1B9A       0
+                text14                              E14      E14       48     1C28       0
+                text13                              5BF      5BF       9F        8       0
+                text12                              404      404       EE        8       0
+                text11                              A82      A82        B     1504       0
+                text10                              A8D      A8D        C     151A       0
+                text9                               AB3      AB3       11     1566       0
+                text8                               AC4      AC4       11     1588       0
+                text7                               B30      B30       21     1660       0
+                text6                                2E       2E      231        8       0
+                text5                               F41      F41       54     1E82       0
+                text4                               25F      25F      1A5        8       0
+                text3                               EA5      EA5       4A     1D4A       0
+                text2                               C85      C85       39     190A       0
+                text1                               6F4      6F4       89        8       0
+                maintext                            77D      77D       6B        8       0
+                cstackBANK0                          20       20       3E       20       1
+                cstackCOMMON                         70       70        E       70       1
+                cstackBANK1                          A0       A0       2B       A0       1
+                clrtext                             A43      A43        6     1486       0
+                inittext                            A49      A49        6     1492       0
+                dataBANK1                            CB       CB        C       A0       1
+                bssBANK1                             D7       D7        A       A0       1
+                bssBANK0                             5E       5E        9       20       1
+                stringtext25                        98A      98A        3      FD0       0
+                stringtext24                        97D      97D        D      FD0       0
+                stringtext23                        96E      96E        F      FD0       0
+                stringtext22                        95E      95E       10      FD0       0
+                stringtext21                        94D      94D       11      FD0       0
+                stringtext20                        93C      93C       11      FD0       0
+                stringtext19                        92B      92B       11      FD0       0
+                stringtext18                        91A      91A       11      FD0       0
+                stringtext17                        909      909       11      FD0       0
+                stringtext16                        8F8      8F8       11      FD0       0
+                stringtext15                        8E7      8E7       11      FD0       0
+                stringtext14                        8D6      8D6       11      FD0       0
+                stringtext13                        8C5      8C5       11      FD0       0
+                stringtext12                        8B4      8B4       11      FD0       0
+                stringtext11                        8A3      8A3       11      FD0       0
+                stringtext10                        892      892       11      FD0       0
+                stringtext9                         881      881       11      FD0       0
+                stringtext8                         870      870       11      FD0       0
+                stringtext7                         85F      85F       11      FD0       0
+                stringtext6                         84E      84E       11      FD0       0
+                stringtext5                         83D      83D       11      FD0       0
+                stringtext4                         82C      82C       11      FD0       0
+                stringtext3                         81B      81B       11      FD0       0
+                stringtext2                         7E8      7E8       22      FD0       0
+                stringtext1                         80A      80A       11      FD0       0
+                idataBANK1                          A99      A99        C     1532       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              D        D        2         0
+                cinit                                 F        F       1F         0
+                intentry                              4        4        9         0
+                reset_vec                             0        0        2         0
+                text44                                3        3        1         0
+                text43                              C1F      C1F       32         0
+                text42                              BF3      BF3       2C         0
+                text41                              CFC      CFC       45         0
+                text40                              4F2      4F2       CD         0
+                text39                              A4F      A4F        7         0
+                text38                              A5D      A5D        8         0
+                text37                              CBE      CBE       3E         0
+                text36                              B51      B51       27         0
+                text34                              AFC      AFC       17         0
+                text33                              B9F      B9F       2A         0
+                text32                              65E      65E       96         0
+                text31                              C51      C51       34         0
+                text30                              A65      A65        8         0
+                text29                              B13      B13       1D         0
+                text28                              A6D      A6D        A         0
+                text27                              A56      A56        7         0
+                text26                              AA5      AA5        E         0
+                text25                              A77      A77        B         0
+                text24                              F95      F95       6B         0
+                text23                              AD5      AD5       12         0
+                text22                              EEF      EEF       52         0
+                text21                              D41      D41       46         0
+                text20                              D87      D87       46         0
+                text19                              BC9      BC9       2A         0
+                text18                              AE7      AE7       15         0
+                text17                              B78      B78       27         0
+                text16                              E5C      E5C       49         0
+                text15                              DCD      DCD       47         0
+                text14                              E14      E14       48         0
+                text13                              5BF      5BF       9F         0
+                text12                              404      404       EE         0
+                text11                              A82      A82        B         0
+                text10                              A8D      A8D        C         0
+                text9                               AB3      AB3       11         0
+                text8                               AC4      AC4       11         0
+                text7                               B30      B30       21         0
+                text6                                2E       2E      231         0
+                text5                               F41      F41       54         0
+                text4                               25F      25F      1A5         0
+                text3                               EA5      EA5       4A         0
+                text2                               C85      C85       39         0
+                text1                               6F4      6F4       89         0
+                maintext                            77D      77D       6B         0
+                clrtext                             A43      A43        6         0
+                inittext                            A49      A49        6         0
+                idataBANK1                          A99      A99        C         0
+
+        CLASS   STRCODE        
+                stringtext25                        98A      98A        3         0
+                stringtext24                        97D      97D        D         0
+                stringtext23                        96E      96E        F         0
+                stringtext22                        95E      95E       10         0
+                stringtext21                        94D      94D       11         0
+                stringtext20                        93C      93C       11         0
+                stringtext19                        92B      92B       11         0
+                stringtext18                        91A      91A       11         0
+                stringtext17                        909      909       11         0
+                stringtext16                        8F8      8F8       11         0
+                stringtext15                        8E7      8E7       11         0
+                stringtext14                        8D6      8D6       11         0
+                stringtext13                        8C5      8C5       11         0
+                stringtext12                        8B4      8B4       11         0
+                stringtext11                        8A3      8A3       11         0
+                stringtext10                        892      892       11         0
+                stringtext9                         881      881       11         0
+                stringtext8                         870      870       11         0
+                stringtext7                         85F      85F       11         0
+                stringtext6                         84E      84E       11         0
+                stringtext5                         83D      83D       11         0
+                stringtext4                         82C      82C       11         0
+                stringtext3                         81B      81B       11         0
+                stringtext2                         7E8      7E8       22         0
+                stringtext1                         80A      80A       11         0
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        E         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       3E         1
+                bssBANK0                             5E       5E        9         1
+
+        CLASS   BANK1          
+                cstackBANK1                          A0       A0       2B         1
+                dataBANK1                            CB       CB        C         1
+                bssBANK1                             D7       D7        A         1
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   SFR4           
+
+        CLASS   SFR5           
+
+        CLASS   SFR6           
+
+        CLASS   SFR7           
+
+        CLASS   SFR8           
+
+        CLASS   SFR9           
+
+        CLASS   SFR10          
+
+        CLASS   SFR11          
+
+        CLASS   SFR12          
+
+        CLASS   SFR13          
+
+        CLASS   SFR14          
+
+        CLASS   SFR15          
+
+        CLASS   SFR16          
+
+        CLASS   SFR17          
+
+        CLASS   SFR18          
+
+        CLASS   SFR19          
+
+        CLASS   SFR20          
+
+        CLASS   SFR21          
+
+        CLASS   SFR22          
+
+        CLASS   SFR23          
+
+        CLASS   SFR24          
+
+        CLASS   SFR25          
+
+        CLASS   SFR26          
+
+        CLASS   SFR27          
+
+        CLASS   SFR28          
+
+        CLASS   SFR29          
+
+        CLASS   SFR30          
+
+        CLASS   SFR31          
+
+        CLASS   CONFIG         
+                config                             8007     8007        2         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   BANK31         
+
+        CLASS   BANK30         
+
+        CLASS   BANK29         
+
+        CLASS   BANK28         
+
+        CLASS   BANK27         
+
+        CLASS   BANK26         
+
+        CLASS   BANK25         
+
+        CLASS   BANK24         
+
+        CLASS   BANK23         
+
+        CLASS   BANK22         
+
+        CLASS   BANK21         
+
+        CLASS   BANK20         
+
+        CLASS   BANK19         
+
+        CLASS   BANK18         
+
+        CLASS   BANK17         
+
+        CLASS   BANK16         
+
+        CLASS   BANK15         
+
+        CLASS   BANK14         
+
+        CLASS   BANK13         
+
+        CLASS   BANK12         
+
+        CLASS   BANK11         
+
+        CLASS   BANK10         
+
+        CLASS   BANK9          
+
+        CLASS   BANK8          
+
+        CLASS   BANK7          
+
+        CLASS   BANK6          
+
+        CLASS   BANK5          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000002  000002         0       0  CODE        2
+                text44                         000003  000001  000004         6       0  CODE        2
+                intentry                       000004  0007E4  0007E8         8       0  CODE        2
+                cstackBANK0                    000020  000047  000067        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                cstackBANK1                    0000A0  000041  0000E1        A0       1  BANK1       1
+                stringtext2                    0007E8  0001A5  00098D       FD0       0  STRCODE     2
+                clrtext                        000A43  000006  000A49      1486       0  CODE        2
+                inittext                       000A49  000006  000A4F      1492       0  CODE        2
+                text39                         000A4F  000007  000A56      149E       0  CODE        2
+                text27                         000A56  000007  000A5D      14AC       0  CODE        2
+                text38                         000A5D  000008  000A65      14BA       0  CODE        2
+                text30                         000A65  000008  000A6D      14CA       0  CODE        2
+                text28                         000A6D  00000A  000A77      14DA       0  CODE        2
+                text25                         000A77  00000B  000A82      14EE       0  CODE        2
+                text11                         000A82  00000B  000A8D      1504       0  CODE        2
+                text10                         000A8D  00000C  000A99      151A       0  CODE        2
+                idataBANK1                     000A99  00000C  000AA5      1532       0  CODE        2
+                text26                         000AA5  00000E  000AB3      154A       0  CODE        2
+                text9                          000AB3  000011  000AC4      1566       0  CODE        2
+                text8                          000AC4  000011  000AD5      1588       0  CODE        2
+                text23                         000AD5  000012  000AE7      15AA       0  CODE        2
+                text18                         000AE7  000015  000AFC      15CE       0  CODE        2
+                text34                         000AFC  000017  000B13      15F8       0  CODE        2
+                text29                         000B13  00001D  000B30      1626       0  CODE        2
+                text7                          000B30  000021  000B51      1660       0  CODE        2
+                text36                         000B51  000027  000B78      16A2       0  CODE        2
+                text17                         000B78  000027  000B9F      16F0       0  CODE        2
+                text33                         000B9F  00002A  000BC9      173E       0  CODE        2
+                text19                         000BC9  00002A  000BF3      1792       0  CODE        2
+                text42                         000BF3  00002C  000C1F      17E6       0  CODE        2
+                text43                         000C1F  000032  000C51      183E       0  CODE        2
+                text31                         000C51  000034  000C85      18A2       0  CODE        2
+                text2                          000C85  000039  000CBE      190A       0  CODE        2
+                text37                         000CBE  00003E  000CFC      197C       0  CODE        2
+                text41                         000CFC  000045  000D41      19F8       0  CODE        2
+                text21                         000D41  000046  000D87      1A82       0  CODE        2
+                text20                         000D87  000046  000DCD      1B0E       0  CODE        2
+                text15                         000DCD  000047  000E14      1B9A       0  CODE        2
+                text14                         000E14  000048  000E5C      1C28       0  CODE        2
+                text16                         000E5C  000049  000EA5      1CB8       0  CODE        2
+                text3                          000EA5  00004A  000EEF      1D4A       0  CODE        2
+                text22                         000EEF  000052  000F41      1DDE       0  CODE        2
+                text5                          000F41  000054  000F95      1E82       0  CODE        2
+                text24                         000F95  00006B  001000      1F2A       0  CODE        2
+                config                         008007  000002  008009     1000E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            00067-0006F               9           1
+        BANK1            000E1-000EF               F           1
+        BANK2            00120-0016F              50           1
+        BANK3            001A0-001EF              50           1
+        BANK4            00220-0024F              30           1
+        BIGRAM           02000-0216F             170           1
+        CODE             00002-00002               1           2
+                         0098D-00A42              B6
+        CONST            00002-00002               1           2
+                         0098D-00A42              73
+        EEDATA           0F000-0F0FF             100           2
+        ENTRY            00002-00002               1           2
+                         0098D-00A42              73
+        IDLOC            08000-08003               4           2
+        RAM              00067-0006F               9           1
+                         000E1-000EF               F
+                         00120-0016F              50
+                         001A0-001EF              50
+                         00220-0024F              30
+        SFR0             00000-0001F              20           1
+        SFR1             00080-0009F              20           1
+        SFR10            00500-0056F              70           1
+        SFR11            00580-005EF              70           1
+        SFR12            00600-0066F              70           1
+        SFR13            00680-006EF              70           1
+        SFR14            00700-0076F              70           1
+        SFR15            00780-007EF              70           1
+        SFR16            00800-0086F              70           1
+        SFR17            00880-008EF              70           1
+        SFR18            00900-0096F              70           1
+        SFR19            00980-009EF              70           1
+        SFR2             00100-0011F              20           1
+        SFR20            00A00-00A6F              70           1
+        SFR21            00A80-00AEF              70           1
+        SFR22            00B00-00B6F              70           1
+        SFR23            00B80-00BEF              70           1
+        SFR24            00C00-00C6F              70           1
+        SFR25            00C80-00CEF              70           1
+        SFR26            00D00-00D6F              70           1
+        SFR27            00D80-00DEF              70           1
+        SFR28            00E00-00E6F              70           1
+        SFR29            00E80-00EEF              70           1
+        SFR3             00180-0019F              20           1
+        SFR30            00F00-00F6F              70           1
+        SFR31            00F80-00FEF              70           1
+        SFR4             00200-0021F              20           1
+        SFR5             00280-002EF              70           1
+        SFR6             00300-0036F              70           1
+        SFR7             00380-003EF              70           1
+        SFR8             00400-0046F              70           1
+        SFR9             00480-004EF              70           1
+        STACK            02091-0216F              DF           1
+        STRCODE          00002-00002               1           2
+                         0098D-00A42              B6
+        STRING           00002-00002               1           2
+                         0098D-00A42              73
+
+                                  Symbol Table
+
+?___awdiv                             cstackBANK0  00029
+?___awmod                             cstackBANK0  0004C
+?___omul                              cstackBANK0  00029
+?_rand                                cstackBANK0  00042
+I2C_u8MstStartSSP2@bReadFlg           cstackBANK0  00029
+I2C_u8MstStartSSP2@u8Address          cstackBANK0  0002A
+I2C_u8MstTxSSP2@u8Data                cstackBANK0  00029
+I2C_vInitMasterSSP2@eMode             cstackBANK0  0002A
+I2C_vInitMasterSSP2@u8ClkDiv          cstackBANK0  00029
+I2C_vInitSlaveSSP1@eMode              cstackBANK0  00029
+I2C_vInitSlaveSSP1@pvCallback         cstackBANK0  0002A
+I2C_vInitSlaveSSP1@u8Address          cstackBANK0  0002C
+KEYPAD_bUpdateBuffer@u8Idx            cstackCOMMON 0007D
+KEYPAD_bUpdateBuffer@u8KeyNo          cstackCOMMON 0007C
+KEYPAD_u8Read@u16PinMap               cstackBANK0  00022
+KEYPAD_u8Read@u8Col                   cstackBANK0  00024
+KEYPAD_u8Read@u8KeyNo                 cstackBANK0  00025
+KEYPAD_u8Read@u8PortA                 cstackBANK0  00020
+KEYPAD_u8Read@u8PortB                 cstackBANK0  00021
+KEYPAD_u8Read@u8Row                   cstackBANK0  00026
+KEYPAD_vInit@spStatus                 cstackBANK0  00034
+ST7032_bSetCursorSSP2@u8Addr          cstackBANK1  000A3
+ST7032_bSetCursorSSP2@u8ColNo         cstackBANK0  0005D
+ST7032_bSetCursorSSP2@u8RowNo         cstackBANK1  000A2
+ST7032_vClearIconSSP2@u8Addr          cstackBANK1  000A0
+ST7032_vDispSettingSSP2@bBlink        cstackBANK0  0002C
+ST7032_vDispSettingSSP2@bCursor       cstackBANK0  0002B
+ST7032_vDispSettingSSP2@bDisp         cstackBANK0  0002F
+ST7032_vWriteCGRAMSSP2@pu8BitMap      cstackBANK0  0005D
+ST7032_vWriteCGRAMSSP2@pu8WkMap       cstackBANK1  000A2
+ST7032_vWriteCGRAMSSP2@u8CharNo       cstackBANK1  000A1
+ST7032_vWriteCGRAMSSP2@u8Idx          cstackBANK1  000A3
+ST7032_vWriteCharSSP2@cData           cstackBANK0  00054
+ST7032_vWriteDataSSP2@pcData          cstackBANK0  0005A
+ST7032_vWriteDataSSP2@pu8WkData       cstackBANK0  0005B
+ST7032_vWriteDataSSP2@u8Idx           cstackBANK0  00059
+ST7032_vWriteDataSSP2@u8Len           cstackBANK0  00053
+ST7032_vWriteIconSSP2@u8Addr          cstackBANK1  000A0
+ST7032_vWriteIconSSP2@u8Map           cstackBANK0  0005D
+ST7032_vWriteStringSSP2@pcStr         cstackBANK0  00053
+ST7032_vWriteStringSSP2@pcWkData      cstackBANK0  00059
+_ANSELA                               (abs)        0018C
+_ANSELB                               (abs)        0018D
+_BCL1IE                               (abs)        00493
+_BCL1IF                               (abs)        00093
+_BCL2IE                               (abs)        004A1
+_BCL2IF                               (abs)        000A1
+_GIE                                  (abs)        0005F
+_HEX_LIST                             stringtext2  007E8
+_I2C_u8MstStartSSP2                   text29       00B13
+_I2C_u8MstTxSSP2                      text28       00A6D
+_I2C_vInitMasterSSP2                  text34       00AFC
+_I2C_vInitSlaveSSP1                   text33       00B9F
+_I2C_vMstStopSSP2                     text27       00A56
+_I2C_vSlaveIsrSSP1                    text42       00BF3
+_ISR                                  intentry     00004
+_KEYPAD_bUpdateBuffer                 text37       00CBE
+_KEYPAD_u8Read                        text40       004F2
+_KEYPAD_vInit                         text31       00C51
+_KEY_LIST                             stringtext1  0080A
+_OPTION_REG                           (abs)        00095
+_OSCCON                               (abs)        00099
+_PEIE                                 (abs)        0005E
+_PORTA                                (abs)        0000C
+_PORTB                                (abs)        0000D
+_RB0                                  (abs)        00068
+_RB3                                  (abs)        0006B
+_SSP1ADD                              (abs)        00212
+_SSP1BUF                              (abs)        00211
+_SSP1CON1                             (abs)        00215
+_SSP1CON1bits                         (abs)        00215
+_SSP1CON2                             (abs)        00216
+_SSP1CON2bits                         (abs)        00216
+_SSP1CON3                             (abs)        00217
+_SSP1IE                               (abs)        0048B
+_SSP1IF                               (abs)        0008B
+_SSP1MSK                              (abs)        00213
+_SSP1STAT                             (abs)        00214
+_SSP1STATbits                         (abs)        00214
+_SSP2ADD                              (abs)        0021A
+_SSP2BUF                              (abs)        00219
+_SSP2CON1                             (abs)        0021D
+_SSP2CON1bits                         (abs)        0021D
+_SSP2CON2                             (abs)        0021E
+_SSP2CON2bits                         (abs)        0021E
+_SSP2CON3                             (abs)        0021F
+_SSP2IE                               (abs)        004A0
+_SSP2IF                               (abs)        000A0
+_SSP2MSK                              (abs)        0021B
+_SSP2STAT                             (abs)        0021C
+_SSP2STATbits                         (abs)        0021C
+_ST7032_bCursorLeftSSP2               text11       00A82
+_ST7032_bCursorRightSSP2              text10       00A8D
+_ST7032_bSetCursorSSP2                text19       00BC9
+_ST7032_u8GetCursorColNoSSP2          text9        00AB3
+_ST7032_u8GetCursorRowNoSSP2          text8        00AC4
+_ST7032_vClearDispSSP2                text18       00AE7
+_ST7032_vClearIconSSP2                text3        00EA5
+_ST7032_vDispSettingSSP2              text7        00B30
+_ST7032_vInitSSP2                     text24       00F95
+_ST7032_vWriteCGRAMSSP2               text5        00F41
+_ST7032_vWriteCharSSP2                text17       00B78
+_ST7032_vWriteDataSSP2                text16       00E5C
+_ST7032_vWriteIconSSP2                text2        00C85
+_ST7032_vWriteStringSSP2              text15       00DCD
+_TMR0                                 (abs)        00015
+_TMR0IE                               (abs)        0005D
+_TMR0IF                               (abs)        0005A
+_TRISA                                (abs)        0008C
+_TRISB                                (abs)        0008D
+__CFG_BOREN$ON                        (abs)        00000
+__CFG_BORV$HI                         (abs)        00000
+__CFG_CLKOUTEN$OFF                    (abs)        00000
+__CFG_CP$OFF                          (abs)        00000
+__CFG_CPD$OFF                         (abs)        00000
+__CFG_FCMEN$OFF                       (abs)        00000
+__CFG_FOSC$INTOSC                     (abs)        00000
+__CFG_IESO$OFF                        (abs)        00000
+__CFG_LVP$OFF                         (abs)        00000
+__CFG_MCLRE$OFF                       (abs)        00000
+__CFG_PLLEN$OFF                       (abs)        00000
+__CFG_PWRTE$ON                        (abs)        00000
+__CFG_STVREN$ON                       (abs)        00000
+__CFG_WDTE$OFF                        (abs)        00000
+__CFG_WRT$OFF                         (abs)        00000
+__Habs1                               abs1         00000
+__Hbank0                              bank0        00000
+__Hbank1                              bank1        00000
+__Hbank10                             bank10       00000
+__Hbank11                             bank11       00000
+__Hbank12                             bank12       00000
+__Hbank13                             bank13       00000
+__Hbank14                             bank14       00000
+__Hbank15                             bank15       00000
+__Hbank16                             bank16       00000
+__Hbank17                             bank17       00000
+__Hbank18                             bank18       00000
+__Hbank19                             bank19       00000
+__Hbank2                              bank2        00000
+__Hbank20                             bank20       00000
+__Hbank21                             bank21       00000
+__Hbank22                             bank22       00000
+__Hbank23                             bank23       00000
+__Hbank24                             bank24       00000
+__Hbank25                             bank25       00000
+__Hbank26                             bank26       00000
+__Hbank27                             bank27       00000
+__Hbank28                             bank28       00000
+__Hbank29                             bank29       00000
+__Hbank3                              bank3        00000
+__Hbank30                             bank30       00000
+__Hbank31                             bank31       00000
+__Hbank4                              bank4        00000
+__Hbank5                              bank5        00000
+__Hbank6                              bank6        00000
+__Hbank7                              bank7        00000
+__Hbank8                              bank8        00000
+__Hbank9                              bank9        00000
+__Hbigram                             bigram       00000
+__HbssBANK0                           bssBANK0     00000
+__HbssBANK1                           bssBANK1     00000
+__Hcinit                              cinit        0002E
+__Hclrtext                            clrtext      00000
+__Hcode                               code         00000
+__Hcommon                             common       00000
+__Hconfig                             config       08009
+__HcstackBANK0                        cstackBANK0  00000
+__HcstackBANK1                        cstackBANK1  00000
+__HcstackCOMMON                       cstackCOMMON 00000
+__HdataBANK1                          dataBANK1    00000
+__Heeprom_data                        eeprom_data  00000
+__Hend_init                           end_init     0000F
+__Hfunctab                            functab      00000
+__HidataBANK1                         idataBANK1   00000
+__Hidloc                              idloc        00000
+__Hinit                               init         0000D
+__Hinittext                           inittext     00000
+__Hintentry                           intentry     0000D
+__Hmaintext                           maintext     00000
+__Hpowerup                            powerup      00000
+__Hram                                ram          00000
+__Hreset_vec                          reset_vec    00002
+__Hsfr0                               sfr0         00000
+__Hsfr1                               sfr1         00000
+__Hsfr10                              sfr10        00000
+__Hsfr11                              sfr11        00000
+__Hsfr12                              sfr12        00000
+__Hsfr13                              sfr13        00000
+__Hsfr14                              sfr14        00000
+__Hsfr15                              sfr15        00000
+__Hsfr16                              sfr16        00000
+__Hsfr17                              sfr17        00000
+__Hsfr18                              sfr18        00000
+__Hsfr19                              sfr19        00000
+__Hsfr2                               sfr2         00000
+__Hsfr20                              sfr20        00000
+__Hsfr21                              sfr21        00000
+__Hsfr22                              sfr22        00000
+__Hsfr23                              sfr23        00000
+__Hsfr24                              sfr24        00000
+__Hsfr25                              sfr25        00000
+__Hsfr26                              sfr26        00000
+__Hsfr27                              sfr27        00000
+__Hsfr28                              sfr28        00000
+__Hsfr29                              sfr29        00000
+__Hsfr3                               sfr3         00000
+__Hsfr30                              sfr30        00000
+__Hsfr31                              sfr31        00000
+__Hsfr4                               sfr4         00000
+__Hsfr5                               sfr5         00000
+__Hsfr6                               sfr6         00000
+__Hsfr7                               sfr7         00000
+__Hsfr8                               sfr8         00000
+__Hsfr9                               sfr9         00000
+__Hspace_0                            (abs)        08009
+__Hspace_1                            (abs)        000E1
+__Hspace_2                            (abs)        00000
+__Hspace_3                            (abs)        00000
+__Hstack                              stack        00000
+__Hstrings                            strings      00000
+__Hstringtext1                        stringtext1  00000
+__Hstringtext10                       stringtext10 00000
+__Hstringtext11                       stringtext11 00000
+__Hstringtext12                       stringtext12 00000
+__Hstringtext13                       stringtext13 00000
+__Hstringtext14                       stringtext14 00000
+__Hstringtext15                       stringtext15 00000
+__Hstringtext16                       stringtext16 00000
+__Hstringtext17                       stringtext17 00000
+__Hstringtext18                       stringtext18 00000
+__Hstringtext19                       stringtext19 00000
+__Hstringtext2                        stringtext2  00000
+__Hstringtext20                       stringtext20 00000
+__Hstringtext21                       stringtext21 00000
+__Hstringtext22                       stringtext22 00000
+__Hstringtext23                       stringtext23 00000
+__Hstringtext24                       stringtext24 00000
+__Hstringtext25                       stringtext25 00000
+__Hstringtext26                       stringtext26 00000
+__Hstringtext3                        stringtext3  00000
+__Hstringtext4                        stringtext4  00000
+__Hstringtext5                        stringtext5  00000
+__Hstringtext6                        stringtext6  00000
+__Hstringtext7                        stringtext7  00000
+__Hstringtext8                        stringtext8  00000
+__Hstringtext9                        stringtext9  00000
+__Htext                               text         00000
+__Labs1                               abs1         00000
+__Lbank0                              bank0        00000
+__Lbank1                              bank1        00000
+__Lbank10                             bank10       00000
+__Lbank11                             bank11       00000
+__Lbank12                             bank12       00000
+__Lbank13                             bank13       00000
+__Lbank14                             bank14       00000
+__Lbank15                             bank15       00000
+__Lbank16                             bank16       00000
+__Lbank17                             bank17       00000
+__Lbank18                             bank18       00000
+__Lbank19                             bank19       00000
+__Lbank2                              bank2        00000
+__Lbank20                             bank20       00000
+__Lbank21                             bank21       00000
+__Lbank22                             bank22       00000
+__Lbank23                             bank23       00000
+__Lbank24                             bank24       00000
+__Lbank25                             bank25       00000
+__Lbank26                             bank26       00000
+__Lbank27                             bank27       00000
+__Lbank28                             bank28       00000
+__Lbank29                             bank29       00000
+__Lbank3                              bank3        00000
+__Lbank30                             bank30       00000
+__Lbank31                             bank31       00000
+__Lbank4                              bank4        00000
+__Lbank5                              bank5        00000
+__Lbank6                              bank6        00000
+__Lbank7                              bank7        00000
+__Lbank8                              bank8        00000
+__Lbank9                              bank9        00000
+__Lbigram                             bigram       00000
+__LbssBANK0                           bssBANK0     00000
+__LbssBANK1                           bssBANK1     00000
+__Lcinit                              cinit        0000F
+__Lclrtext                            clrtext      00000
+__Lcode                               code         00000
+__Lcommon                             common       00000
+__Lconfig                             config       08007
+__LcstackBANK0                        cstackBANK0  00000
+__LcstackBANK1                        cstackBANK1  00000
+__LcstackCOMMON                       cstackCOMMON 00000
+__LdataBANK1                          dataBANK1    00000
+__Leeprom_data                        eeprom_data  00000
+__Lend_init                           end_init     0000D
+__Lfunctab                            functab      00000
+__LidataBANK1                         idataBANK1   00000
+__Lidloc                              idloc        00000
+__Linit                               init         0000D
+__Linittext                           inittext     00000
+__Lintentry                           intentry     00004
+__Lmaintext                           maintext     00000
+__Lpowerup                            powerup      00000
+__Lram                                ram          00000
+__Lreset_vec                          reset_vec    00000
+__Lsfr0                               sfr0         00000
+__Lsfr1                               sfr1         00000
+__Lsfr10                              sfr10        00000
+__Lsfr11                              sfr11        00000
+__Lsfr12                              sfr12        00000
+__Lsfr13                              sfr13        00000
+__Lsfr14                              sfr14        00000
+__Lsfr15                              sfr15        00000
+__Lsfr16                              sfr16        00000
+__Lsfr17                              sfr17        00000
+__Lsfr18                              sfr18        00000
+__Lsfr19                              sfr19        00000
+__Lsfr2                               sfr2         00000
+__Lsfr20                              sfr20        00000
+__Lsfr21                              sfr21        00000
+__Lsfr22                              sfr22        00000
+__Lsfr23                              sfr23        00000
+__Lsfr24                              sfr24        00000
+__Lsfr25                              sfr25        00000
+__Lsfr26                              sfr26        00000
+__Lsfr27                              sfr27        00000
+__Lsfr28                              sfr28        00000
+__Lsfr29                              sfr29        00000
+__Lsfr3                               sfr3         00000
+__Lsfr30                              sfr30        00000
+__Lsfr31                              sfr31        00000
+__Lsfr4                               sfr4         00000
+__Lsfr5                               sfr5         00000
+__Lsfr6                               sfr6         00000
+__Lsfr7                               sfr7         00000
+__Lsfr8                               sfr8         00000
+__Lsfr9                               sfr9         00000
+__Lspace_0                            (abs)        00000
+__Lspace_1                            (abs)        00000
+__Lspace_2                            (abs)        00000
+__Lspace_3                            (abs)        00000
+__Lstack                              stack        00000
+__Lstrings                            strings      00000
+__Lstringtext1                        stringtext1  00000
+__Lstringtext10                       stringtext10 00000
+__Lstringtext11                       stringtext11 00000
+__Lstringtext12                       stringtext12 00000
+__Lstringtext13                       stringtext13 00000
+__Lstringtext14                       stringtext14 00000
+__Lstringtext15                       stringtext15 00000
+__Lstringtext16                       stringtext16 00000
+__Lstringtext17                       stringtext17 00000
+__Lstringtext18                       stringtext18 00000
+__Lstringtext19                       stringtext19 00000
+__Lstringtext2                        stringtext2  00000
+__Lstringtext20                       stringtext20 00000
+__Lstringtext21                       stringtext21 00000
+__Lstringtext22                       stringtext22 00000
+__Lstringtext23                       stringtext23 00000
+__Lstringtext24                       stringtext24 00000
+__Lstringtext25                       stringtext25 00000
+__Lstringtext26                       stringtext26 00000
+__Lstringtext3                        stringtext3  00000
+__Lstringtext4                        stringtext4  00000
+__Lstringtext5                        stringtext5  00000
+__Lstringtext6                        stringtext6  00000
+__Lstringtext7                        stringtext7  00000
+__Lstringtext8                        stringtext8  00000
+__Lstringtext9                        stringtext9  00000
+__Ltext                               text         00000
+__S0                                  (abs)        08009
+__S1                                  (abs)        000E1
+__S2                                  (abs)        00000
+__S3                                  (abs)        00000
+___awdiv                              text22       00EEF
+___awdiv@counter                      cstackBANK0  0002E
+___awdiv@dividend                     cstackBANK0  0002B
+___awdiv@divisor                      cstackBANK0  00029
+___awdiv@quotient                     cstackBANK0  00030
+___awdiv@sign                         cstackBANK0  0002F
+___awmod                              text21       00D41
+___awmod@counter                      cstackBANK0  00051
+___awmod@dividend                     cstackBANK0  0004E
+___awmod@divisor                      cstackBANK0  0004C
+___awmod@sign                         cstackBANK0  00052
+___bmul                               text23       00AD5
+___bmul@multiplicand                  cstackBANK0  00029
+___bmul@multiplier                    cstackBANK0  0002C
+___bmul@product                       cstackBANK0  0002B
+___int_sp                             stack        00000
+___latbits                            (abs)        00001
+___omul                               text14       00E14
+___omul@multiplicand                  cstackBANK0  00031
+___omul@multiplier                    cstackBANK0  00029
+___omul@product                       cstackBANK0  0003A
+___sp                                 stack        00000
+___stackhi                            (abs)        0216F
+___stacklo                            (abs)        02091
+__end_of_HEX_LIST                     stringtext2  007F9
+__end_of_I2C_u8MstStartSSP2           text29       00B30
+__end_of_I2C_u8MstTxSSP2              text28       00A77
+__end_of_I2C_vInitMasterSSP2          text34       00B13
+__end_of_I2C_vInitSlaveSSP1           text33       00BC9
+__end_of_I2C_vMstStopSSP2             text27       00A5D
+__end_of_I2C_vSlaveIsrSSP1            text42       00C1F
+__end_of_ISR                          intentry     0000D
+__end_of_KEYPAD_bUpdateBuffer         text37       00CFC
+__end_of_KEYPAD_u8Read                text40       005BF
+__end_of_KEYPAD_vInit                 text31       00C85
+__end_of_KEY_LIST                     stringtext1  0081B
+__end_of_ST7032_bCursorLeftSSP2       text11       00A8D
+__end_of_ST7032_bCursorRightSSP2      text10       00A99
+__end_of_ST7032_bSetCursorSSP2        text19       00BF3
+__end_of_ST7032_u8GetCursorColNoSSP2  text9        00AC4
+__end_of_ST7032_u8GetCursorRowNoSSP2  text8        00AD5
+__end_of_ST7032_vClearDispSSP2        text18       00AFC
+__end_of_ST7032_vClearIconSSP2        text3        00EEF
+__end_of_ST7032_vDispSettingSSP2      text7        00B51
+__end_of_ST7032_vInitSSP2             text24       01000
+__end_of_ST7032_vWriteCGRAMSSP2       text5        00F95
+__end_of_ST7032_vWriteCharSSP2        text17       00B9F
+__end_of_ST7032_vWriteDataSSP2        text16       00EA5
+__end_of_ST7032_vWriteIconSSP2        text2        00CBE
+__end_of_ST7032_vWriteStringSSP2      text15       00E14
+__end_of___awdiv                      text22       00F41
+__end_of___awmod                      text21       00D87
+__end_of___bmul                       text23       00AE7
+__end_of___omul                       text14       00E5C
+__end_of__initialization              cinit        0002A
+__end_of_bSetCursorSSP2               text20       00DCD
+__end_of_criticalSec_vBegin           text39       00A56
+__end_of_criticalSec_vEnd             text38       00A65
+__end_of_main                         maintext     007E8
+__end_of_memset                       text32       006F4
+__end_of_rand                         text13       0065E
+__end_of_readColumn                   text41       00D41
+__end_of_ssp1_vCallback               text43       00C51
+__end_of_ssp2_vLCDTest01              text12       004F2
+__end_of_ssp2_vLCDTest02              text6        0025F
+__end_of_ssp2_vLCDTest03              text4        00404
+__end_of_ssp2_vLCDTest04              text1        0077D
+__end_of_timer_vInterrupt             text36       00B78
+__end_of_vDmyCallback                 text44       00004
+__end_of_vExecCmdEndSSP2              text26       00AB3
+__end_of_vExecCmdSSP2                 text25       00A82
+__end_of_vMasterWaitSSP2              text30       00A6D
+__initialization                      cinit        0000F
+__pbssBANK0                           bssBANK0     0005E
+__pbssBANK1                           bssBANK1     000D7
+__pcstackBANK0                        cstackBANK0  00020
+__pcstackBANK1                        cstackBANK1  000A0
+__pcstackCOMMON                       cstackCOMMON 00070
+__pdataBANK1                          dataBANK1    000CB
+__pidataBANK1                         idataBANK1   00A99
+__pintentry                           intentry     00004
+__pmaintext                           maintext     0077D
+__pstringtext1                        stringtext1  0080A
+__pstringtext10                       stringtext10 00892
+__pstringtext11                       stringtext11 008A3
+__pstringtext12                       stringtext12 008B4
+__pstringtext13                       stringtext13 008C5
+__pstringtext14                       stringtext14 008D6
+__pstringtext15                       stringtext15 008E7
+__pstringtext16                       stringtext16 008F8
+__pstringtext17                       stringtext17 00909
+__pstringtext18                       stringtext18 0091A
+__pstringtext19                       stringtext19 0092B
+__pstringtext2                        stringtext2  007E8
+__pstringtext20                       stringtext20 0093C
+__pstringtext21                       stringtext21 0094D
+__pstringtext22                       stringtext22 0095E
+__pstringtext23                       stringtext23 0096E
+__pstringtext24                       stringtext24 0097D
+__pstringtext25                       stringtext25 0098A
+__pstringtext26                       stringtext26 00000
+__pstringtext3                        stringtext3  0081B
+__pstringtext4                        stringtext4  0082C
+__pstringtext5                        stringtext5  0083D
+__pstringtext6                        stringtext6  0084E
+__pstringtext7                        stringtext7  0085F
+__pstringtext8                        stringtext8  00870
+__pstringtext9                        stringtext9  00881
+__ptext1                              text1        006F4
+__ptext10                             text10       00A8D
+__ptext11                             text11       00A82
+__ptext12                             text12       00404
+__ptext13                             text13       005BF
+__ptext14                             text14       00E14
+__ptext15                             text15       00DCD
+__ptext16                             text16       00E5C
+__ptext17                             text17       00B78
+__ptext18                             text18       00AE7
+__ptext19                             text19       00BC9
+__ptext2                              text2        00C85
+__ptext20                             text20       00D87
+__ptext21                             text21       00D41
+__ptext22                             text22       00EEF
+__ptext23                             text23       00AD5
+__ptext24                             text24       00F95
+__ptext25                             text25       00A77
+__ptext26                             text26       00AA5
+__ptext27                             text27       00A56
+__ptext28                             text28       00A6D
+__ptext29                             text29       00B13
+__ptext3                              text3        00EA5
+__ptext30                             text30       00A65
+__ptext31                             text31       00C51
+__ptext32                             text32       0065E
+__ptext33                             text33       00B9F
+__ptext34                             text34       00AFC
+__ptext36                             text36       00B51
+__ptext37                             text37       00CBE
+__ptext38                             text38       00A5D
+__ptext39                             text39       00A4F
+__ptext4                              text4        0025F
+__ptext40                             text40       004F2
+__ptext41                             text41       00CFC
+__ptext42                             text42       00BF3
+__ptext43                             text43       00C1F
+__ptext44                             text44       00003
+__ptext5                              text5        00F41
+__ptext6                              text6        0002E
+__ptext7                              text7        00B30
+__ptext8                              text8        00AC4
+__ptext9                              text9        00AB3
+__size_of_I2C_u8MstStartSSP2          (abs)        00000
+__size_of_I2C_u8MstTxSSP2             (abs)        00000
+__size_of_I2C_vInitMasterSSP2         (abs)        00000
+__size_of_I2C_vInitSlaveSSP1          (abs)        00000
+__size_of_I2C_vMstStopSSP2            (abs)        00000
+__size_of_I2C_vSlaveIsrSSP1           (abs)        00000
+__size_of_ISR                         (abs)        00000
+__size_of_KEYPAD_bUpdateBuffer        (abs)        00000
+__size_of_KEYPAD_u8Read               (abs)        00000
+__size_of_KEYPAD_vInit                (abs)        00000
+__size_of_ST7032_bCursorLeftSSP2      (abs)        00000
+__size_of_ST7032_bCursorRightSSP2     (abs)        00000
+__size_of_ST7032_bSetCursorSSP2       (abs)        00000
+__size_of_ST7032_u8GetCursorColNoSSP2 (abs)        00000
+__size_of_ST7032_u8GetCursorRowNoSSP2 (abs)        00000
+__size_of_ST7032_vClearDispSSP2       (abs)        00000
+__size_of_ST7032_vClearIconSSP2       (abs)        00000
+__size_of_ST7032_vDispSettingSSP2     (abs)        00000
+__size_of_ST7032_vInitSSP2            (abs)        00000
+__size_of_ST7032_vWriteCGRAMSSP2      (abs)        00000
+__size_of_ST7032_vWriteCharSSP2       (abs)        00000
+__size_of_ST7032_vWriteDataSSP2       (abs)        00000
+__size_of_ST7032_vWriteIconSSP2       (abs)        00000
+__size_of_ST7032_vWriteStringSSP2     (abs)        00000
+__size_of___awdiv                     (abs)        00000
+__size_of___awmod                     (abs)        00000
+__size_of___bmul                      (abs)        00000
+__size_of___omul                      (abs)        00000
+__size_of_bSetCursorSSP2              (abs)        00000
+__size_of_criticalSec_vBegin          (abs)        00000
+__size_of_criticalSec_vEnd            (abs)        00000
+__size_of_main                        (abs)        00000
+__size_of_memset                      (abs)        00000
+__size_of_rand                        (abs)        00000
+__size_of_readColumn                  (abs)        00000
+__size_of_ssp1_vCallback              (abs)        00000
+__size_of_ssp2_vLCDTest01             (abs)        00000
+__size_of_ssp2_vLCDTest02             (abs)        00000
+__size_of_ssp2_vLCDTest03             (abs)        00000
+__size_of_ssp2_vLCDTest04             (abs)        00000
+__size_of_timer_vInterrupt            (abs)        00000
+__size_of_vDmyCallback                (abs)        00000
+__size_of_vExecCmdEndSSP2             (abs)        00000
+__size_of_vExecCmdSSP2                (abs)        00000
+__size_of_vMasterWaitSSP2             (abs)        00000
+_bMstStartFlgSSP1                     bssBANK1     000D8
+_bMstStartFlgSSP2                     bssBANK1     000D7
+_bSetCursorSSP2                       text20       00D87
+_criticalSec_vBegin                   text39       00A4F
+_criticalSec_vEnd                     text38       00A5D
+_eInputMode                           bssBANK0     00065
+_main                                 maintext     0077D
+_memset                               text32       0065E
+_pvSSP1Func                           dataBANK1    000D5
+_pvSSP2Func                           dataBANK1    000D3
+_rand                                 text13       005BF
+_readColumn                           text41       00CFC
+_seed                                 bssBANK1     000D9
+_spKEYPAD_status                      bssBANK0     00063
+_ssp1_vCallback                       text43       00C1F
+_ssp2_vLCDTest01                      text12       00404
+_ssp2_vLCDTest02                      text6        0002E
+_ssp2_vLCDTest03                      text4        0025F
+_ssp2_vLCDTest04                      text1        006F4
+_stStateSSP1                          bssBANK0     00060
+_stStateSSP2                          bssBANK0     0005E
+_timer_vInterrupt                     text36       00B51
+_u8Depth                              bssBANK0     00062
+_u8KeyValue                           bssBANK0     00064
+_u8RxData                             bssBANK0     00066
+_vDmyCallback                         text44       00003
+_vExecCmdEndSSP2                      text26       00AA5
+_vExecCmdSSP2                         text25       00A77
+_vMasterWaitSSP2                      text30       00A65
+bSetCursorSSP2@u8Addr                 cstackBANK0  0005B
+bSetCursorSSP2@u8Pos                  cstackBANK0  0005C
+btemp                                 (abs)        0007E
+clear_ram0                            clrtext      00A43
+end_of_initialization                 cinit        0002A
+init_ram                              inittext     00A49
+int$flags                             (abs)        0007E
+intlevel0                             functab      00000
+intlevel1                             functab      00000
+intlevel2                             functab      00000
+intlevel3                             functab      00000
+intlevel4                             functab      00000
+intlevel5                             functab      00000
+main@keypadSts                        cstackBANK1  000B0
+memset@c                              cstackBANK0  00029
+memset@dest                           cstackBANK0  00031
+memset@k                              cstackBANK0  0002F
+memset@n                              cstackBANK0  0002B
+memset@s                              cstackBANK0  00032
+readColumn@portA                      cstackCOMMON 00072
+readColumn@portB                      cstackCOMMON 00073
+readColumn@u16PinMap                  cstackCOMMON 00075
+readColumn@u8Col                      cstackCOMMON 00077
+readColumn@u8Port                     cstackCOMMON 00074
+reset_vec                             reset_vec    00000
+ssp1_vCallback@u8EvtType              cstackCOMMON 00071
+ssp2_vLCDTest01@u8Idx                 cstackBANK1  000A6
+ssp2_vLCDTest01@val                   cstackBANK1  000A7
+ssp2_vLCDTest02@u8Idx                 cstackBANK1  000A6
+ssp2_vLCDTest03@F2641                 dataBANK1    000CB
+ssp2_vLCDTest03@u8BitMap              cstackBANK1  000A7
+ssp2_vLCDTest03@u8Idx                 cstackBANK1  000A6
+ssp2_vLCDTest04@u8Addr                cstackBANK1  000A6
+ssp2_vLCDTest04@u8SVal                cstackBANK1  000A7
+start                                 init         0000D
+start_initialization                  cinit        0000F
+vDmyCallback@u8BusNo                  cstackCOMMON 00070
+vDmyCallback@u8EvtType                cstackCOMMON 00071
+vExecCmdEndSSP2@u8Cmd                 cstackBANK0  0002A
+vExecCmdSSP2@u8Cmd                    cstackBANK0  0002A
+wtemp0                                (abs)        0007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 138 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  keypadSts      27   16[BANK1 ] struct .
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0      27       0       0       0
+      Temps:          0       0       1       0       0       0
+      Totals:         0       0      28       0       0       0
+Total ram usage:       28 bytes
+ Hardware stack levels required when called:   11
+ This function calls:
+		_I2C_vInitMasterSSP2
+		_I2C_vInitSlaveSSP1
+		_KEYPAD_vInit
+		_ST7032_vInitSSP2
+		_ssp2_vLCDTest01
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _ssp2_vLCDTest04 *****************
+ Defined at:
+		line 916 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u8SVal          1    7[BANK1 ] unsigned char 
+  u8Addr          1    6[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       2       0       0       0
+      Temps:          0       0       2       0       0       0
+      Totals:         0       0       4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:   10
+ This function calls:
+		_ST7032_bSetCursorSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vClearIconSSP2
+		_ST7032_vDispSettingSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteIconSSP2
+		_ST7032_vWriteStringSSP2
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vWriteIconSSP2 *****************
+ Defined at:
+		line 1150 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8Addr          1    wreg     unsigned char 
+  u8Map           1   61[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Addr          1    0[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       0       1       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       1       1       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		_bSetCursorSSP2
+		_vExecCmdSSP2
+ This function is called by:
+		_ssp2_vLCDTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vClearIconSSP2 *****************
+ Defined at:
+		line 408 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u8Addr          1    0[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       1       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       1       1       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		_bSetCursorSSP2
+		_vExecCmdEndSSP2
+		_vExecCmdSSP2
+ This function is called by:
+		_ssp2_vLCDTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ssp2_vLCDTest03 *****************
+ Defined at:
+		line 792 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u8BitMap        8    7[BANK1 ] unsigned char [8]
+  u8Idx           1    6[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       9       0       0       0
+      Temps:          0       0       2       0       0       0
+      Totals:         0       0      11       0       0       0
+Total ram usage:       11 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:   10
+ This function calls:
+		_ST7032_bSetCursorSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vDispSettingSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vWriteCGRAMSSP2 *****************
+ Defined at:
+		line 864 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8CharNo        1    wreg     unsigned char 
+  pu8BitMap       1   61[BANK0 ] PTR unsigned char 
+		 -> ssp2_vLCDTest03@u8BitMap(8), 
+ Auto vars:     Size  Location     Type
+  u8CharNo        1    1[BANK1 ] unsigned char 
+  u8Idx           1    3[BANK1 ] unsigned char 
+  pu8WkMap        1    2[BANK1 ] PTR unsigned char 
+		 -> ssp2_vLCDTest03@u8BitMap(8), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       0       3       0       0       0
+      Temps:          0       0       1       0       0       0
+      Totals:         0       1       4       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		_bSetCursorSSP2
+		_vExecCmdSSP2
+ This function is called by:
+		_ssp2_vLCDTest03
+ This function uses a non-reentrant model
+
+
+ *************** function _ssp2_vLCDTest02 *****************
+ Defined at:
+		line 651 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u8Idx           1    6[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       1       0       0       0
+      Temps:          0       0       2       0       0       0
+      Totals:         0       0       3       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:   10
+ This function calls:
+		_ST7032_bCursorLeftSSP2
+		_ST7032_bCursorRightSSP2
+		_ST7032_bSetCursorSSP2
+		_ST7032_u8GetCursorColNoSSP2
+		_ST7032_u8GetCursorRowNoSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vDispSettingSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vDispSettingSSP2 *****************
+ Defined at:
+		line 554 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  bDisp           1    wreg     unsigned char 
+  bCursor         1   11[BANK0 ] unsigned char 
+  bBlink          1   12[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  bDisp           1   15[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       2       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       2       0       0       0       0
+      Totals:         0       5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_vExecCmdEndSSP2
+ This function is called by:
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+		_ssp2_vI2CTest03
+		_ssp2_vI2CTest04
+		_ssp2_vKeypadTest01
+		_ssp2_vKeypadTest02
+		_ssp2_vKeypadTest03
+		_ssp2_vKeypadTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_u8GetCursorRowNoSSP2 *****************
+ Defined at:
+		line 598 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		___awdiv
+ This function is called by:
+		_ssp2_vLCDTest02
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_u8GetCursorColNoSSP2 *****************
+ Defined at:
+		line 638 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		___awmod
+ This function is called by:
+		_ssp2_vLCDTest02
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_bCursorRightSSP2 *****************
+ Defined at:
+		line 795 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_bSetCursorSSP2
+ This function is called by:
+		_ssp2_vLCDTest02
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_bCursorLeftSSP2 *****************
+ Defined at:
+		line 747 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		_bSetCursorSSP2
+ This function is called by:
+		_ssp2_vLCDTest02
+ This function uses a non-reentrant model
+
+
+ *************** function _ssp2_vLCDTest01 *****************
+ Defined at:
+		line 591 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  val             1    7[BANK1 ] unsigned char 
+  u8Idx           1    6[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       2       0       0       0
+      Temps:          0       0       2       0       0       0
+      Totals:         0       0       4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:   10
+ This function calls:
+		_ST7032_bSetCursorSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteDataSSP2
+		_ST7032_vWriteStringSSP2
+		___awmod
+		_rand
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _rand *****************
+ Defined at:
+		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   34[BANK0 ] int 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       2       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       8       0       0       0       0
+      Totals:         0      10       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		___omul
+ This function is called by:
+		_ssp2_vLCDTest01
+ This function uses a non-reentrant model
+
+
+ *************** function ___omul *****************
+ Defined at:
+		line 91 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c"
+ Parameters:    Size  Location     Type
+  multiplier      8    9[BANK0 ] unsigned long long 
+  multiplicand    8   17[BANK0 ] unsigned long long 
+ Auto vars:     Size  Location     Type
+  product         8   26[BANK0 ] unsigned long long 
+ Return value:  Size  Location     Type
+                  8    9[BANK0 ] unsigned long long 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0      16       0       0       0       0
+      Locals:         0       8       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0      25       0       0       0       0
+Total ram usage:       25 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_rand
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vWriteStringSSP2 *****************
+ Defined at:
+		line 1000 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  pcStr           2   51[BANK0 ] PTR unsigned char 
+		 -> STR_32(17), STR_31(17), STR_30(17), STR_29(17), 
+		 -> STR_28(17), STR_27(17), STR_26(17), STR_25(17), 
+		 -> STR_24(17), STR_23(17), STR_22(17), STR_21(17), 
+		 -> STR_20(13), STR_19(16), STR_18(16), STR_17(15), 
+		 -> STR_16(15), STR_15(3), STR_14(3), STR_13(17), 
+		 -> STR_12(17), STR_11(3), STR_10(3), STR_9(17), 
+		 -> STR_8(17), STR_7(17), STR_6(17), STR_5(17), 
+		 -> STR_4(17), STR_3(3), STR_2(17), STR_1(17), 
+ Auto vars:     Size  Location     Type
+  pcWkData        2   57[BANK0 ] PTR unsigned char 
+		 -> STR_32(17), STR_31(17), STR_30(17), STR_29(17), 
+		 -> STR_28(17), STR_27(17), STR_26(17), STR_25(17), 
+		 -> STR_24(17), STR_23(17), STR_22(17), STR_21(17), 
+		 -> STR_20(13), STR_19(16), STR_18(16), STR_17(15), 
+		 -> STR_16(15), STR_15(3), STR_14(3), STR_13(17), 
+		 -> STR_12(17), STR_11(3), STR_10(3), STR_9(17), 
+		 -> STR_8(17), STR_7(17), STR_6(17), STR_5(17), 
+		 -> STR_4(17), STR_3(3), STR_2(17), STR_1(17), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       2       0       0       0       0
+      Locals:         0       2       0       0       0       0
+      Temps:          0       4       0       0       0       0
+      Totals:         0       8       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		___awmod
+ This function is called by:
+		_ssp2_vLCDTest01
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+		_ssp2_vI2CTest03
+		_ssp2_vI2CTest04
+		_ssp2_vKeypadTest01
+		_ssp2_vKeypadTest02
+		_ssp2_vKeypadTest03
+		_ssp2_vKeypadTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vWriteDataSSP2 *****************
+ Defined at:
+		line 1073 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  pcData          1    wreg     PTR unsigned char 
+		 -> ssp2_vLCDTest01@val(1), 
+  u8Len           1   51[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  pcData          1   58[BANK0 ] PTR unsigned char 
+		 -> ssp2_vLCDTest01@val(1), 
+  pu8WkData       1   59[BANK0 ] PTR unsigned char 
+		 -> ssp2_vLCDTest01@val(1), 
+  u8Idx           1   57[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       3       0       0       0       0
+      Temps:          0       5       0       0       0       0
+      Totals:         0       9       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		___awmod
+ This function is called by:
+		_ssp2_vLCDTest01
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vWriteCharSSP2 *****************
+ Defined at:
+		line 936 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  cData           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  cData           1   52[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+		___awmod
+ This function is called by:
+		_ssp2_vLCDTest01
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+		_ssp2_vI2CTest01
+		_ssp2_vKeypadTest01
+		_ssp2_vKeypadTest02
+		_ssp2_vKeypadTest03
+		_ssp2_vKeypadTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vClearDispSSP2 *****************
+ Defined at:
+		line 337 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_vExecCmdEndSSP2
+ This function is called by:
+		_ssp2_vLCDTest01
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_bSetCursorSSP2 *****************
+ Defined at:
+		line 693 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8RowNo         1    wreg     unsigned char 
+  u8ColNo         1   61[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  u8RowNo         1    2[BANK1 ] unsigned char 
+  u8Addr          1    3[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       0       2       0       0       0
+      Temps:          0       0       2       0       0       0
+      Totals:         0       1       4       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    9
+ This function calls:
+		___bmul
+		_bSetCursorSSP2
+ This function is called by:
+		_ssp2_vLCDTest01
+		_ssp2_vLCDTest02
+		_ssp2_vLCDTest03
+		_ssp2_vLCDTest04
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+		_ssp2_vI2CTest03
+		_ssp2_vI2CTest04
+		_ssp2_vKeypadTest01
+		_ssp2_vKeypadTest02
+		_ssp2_vKeypadTest03
+		_ssp2_vKeypadTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _bSetCursorSSP2 *****************
+ Defined at:
+		line 1321 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8Pos           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Pos           1   60[BANK0 ] unsigned char 
+  u8Addr          1   59[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0
+      Temps:          0       8       0       0       0       0
+      Totals:         0      10       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_I2C_u8MstStartSSP2
+		___awdiv
+		___awmod
+		_vExecCmdEndSSP2
+ This function is called by:
+		_ST7032_vClearIconSSP2
+		_ST7032_bSetCursorSSP2
+		_ST7032_bCursorLeftSSP2
+		_ST7032_bCursorRightSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteIconSSP2
+ This function uses a non-reentrant model
+
+
+ *************** function ___awmod *****************
+ Defined at:
+		line 5 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awmod.c"
+ Parameters:    Size  Location     Type
+  divisor         2   44[BANK0 ] int 
+  dividend        2   46[BANK0 ] int 
+ Auto vars:     Size  Location     Type
+  sign            1   50[BANK0 ] unsigned char 
+  counter         1   49[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2   44[BANK0 ] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       4       0       0       0       0
+      Locals:         0       2       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       7       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_ssp2_vLCDTest01
+		_ST7032_u8GetCursorColNoSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+		_ST7032_vWriteDataSSP2
+		_bSetCursorSSP2
+		_ST7032_u8GetCursorColNoSSP1
+		_ST7032_vWriteCharSSP1
+		_ST7032_vWriteStringSSP1
+		_ST7032_vWriteDataSSP1
+		_bSetCursorSSP1
+ This function uses a non-reentrant model
+
+
+ *************** function ___awdiv *****************
+ Defined at:
+		line 5 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c"
+ Parameters:    Size  Location     Type
+  divisor         2    9[BANK0 ] int 
+  dividend        2   11[BANK0 ] int 
+ Auto vars:     Size  Location     Type
+  quotient        2   16[BANK0 ] int 
+  sign            1   15[BANK0 ] unsigned char 
+  counter         1   14[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  2    9[BANK0 ] int 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       4       0       0       0       0
+      Locals:         0       4       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       9       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_ST7032_u8GetCursorRowNoSSP2
+		_bSetCursorSSP2
+		_ssp2_vI2CTest01
+		_ssp2_vKeypadTest01
+		_ST7032_u8GetCursorRowNoSSP1
+		_bSetCursorSSP1
+ This function uses a non-reentrant model
+
+
+ *************** function ___bmul *****************
+ Defined at:
+		line 4 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c"
+ Parameters:    Size  Location     Type
+  multiplier      1    wreg     unsigned char 
+  multiplicand    1    9[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  multiplier      1   12[BANK0 ] unsigned char 
+  product         1   11[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       2       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_ST7032_bSetCursorSSP2
+		_ST7032_bSetCursorSSP1
+ This function uses a non-reentrant model
+
+
+ *************** function _ST7032_vInitSSP2 *****************
+ Defined at:
+		line 179 in file "st7032.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    8
+ This function calls:
+		_I2C_u8MstStartSSP2
+		_vExecCmdEndSSP2
+		_vExecCmdSSP2
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _vExecCmdSSP2 *****************
+ Defined at:
+		line 1216 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8Cmd           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Cmd           1   10[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_u8MstTxSSP2
+ This function is called by:
+		_ST7032_vInitSSP2
+		_ST7032_vClearIconSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteIconSSP2
+		_ST7032_vSetContrastSSP2
+		_ST7032_vDispIconSSP2
+ This function uses a non-reentrant model
+
+
+ *************** function _vExecCmdEndSSP2 *****************
+ Defined at:
+		line 1264 in file "st7032.c"
+ Parameters:    Size  Location     Type
+  u8Cmd           1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Cmd           1   10[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_u8MstTxSSP2
+		_I2C_vMstStopSSP2
+ This function is called by:
+		_ST7032_vInitSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vClearIconSSP2
+		_ST7032_vDispSettingSSP2
+		_bSetCursorSSP2
+		_ST7032_vSetContrastSSP2
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_vMstStopSSP2 *****************
+ Defined at:
+		line 366 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_vMasterWaitSSP2
+ This function is called by:
+		_ST7032_vClearIconSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+		_ST7032_vWriteDataSSP2
+		_ST7032_vWriteIconSSP2
+		_vExecCmdEndSSP2
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+		_ssp2_vI2CTest03
+		_ssp2_vI2CTest04
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_u8MstTxSSP2 *****************
+ Defined at:
+		line 411 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+  u8Data          1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Data          1    9[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_vMasterWaitSSP2
+ This function is called by:
+		_ST7032_vClearIconSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+		_ST7032_vWriteDataSSP2
+		_ST7032_vWriteIconSSP2
+		_vExecCmdSSP2
+		_vExecCmdEndSSP2
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_u8MstStartSSP2 *****************
+ Defined at:
+		line 316 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+  u8Address       1    wreg     unsigned char 
+  bReadFlg        1    9[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Address       1   10[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_vMasterWaitSSP2
+ This function is called by:
+		_ST7032_vInitSSP2
+		_ST7032_vClearDispSSP2
+		_ST7032_vClearIconSSP2
+		_ST7032_vDispSettingSSP2
+		_ST7032_vWriteCGRAMSSP2
+		_ST7032_vWriteCharSSP2
+		_ST7032_vWriteStringSSP2
+		_ST7032_vWriteDataSSP2
+		_ST7032_vWriteIconSSP2
+		_bSetCursorSSP2
+		_ssp2_vI2CTest01
+		_ssp2_vI2CTest02
+		_ssp2_vI2CTest03
+		_ssp2_vI2CTest04
+		_ST7032_vSetContrastSSP2
+		_ST7032_vDispIconSSP2
+ This function uses a non-reentrant model
+
+
+ *************** function _vMasterWaitSSP2 *****************
+ Defined at:
+		line 580 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_u8MstStartSSP2
+		_I2C_vMstStopSSP2
+		_I2C_u8MstTxSSP2
+		_I2C_u8MstRxSSP2
+ This function uses a non-reentrant model
+
+
+ *************** function _KEYPAD_vInit *****************
+ Defined at:
+		line 83 in file "keypad.c"
+ Parameters:    Size  Location     Type
+  spStatus        1    wreg     PTR struct .
+		 -> main@keypadSts(27), 
+ Auto vars:     Size  Location     Type
+  spStatus        1   20[BANK0 ] PTR struct .
+		 -> main@keypadSts(27), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       1       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_memset
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _memset *****************
+ Defined at:
+		line 4 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c"
+ Parameters:    Size  Location     Type
+  dest            1    wreg     PTR void 
+		 -> main@keypadSts(27), 
+  c               2    9[BANK0 ] int 
+  n               2   11[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  dest            1   17[BANK0 ] PTR void 
+		 -> main@keypadSts(27), 
+  k               2   15[BANK0 ] unsigned int 
+  s               1   18[BANK0 ] PTR unsigned char 
+		 -> main@keypadSts(27), 
+ Return value:  Size  Location     Type
+                  1    wreg      PTR void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       4       0       0       0       0
+      Locals:         0       4       0       0       0       0
+      Temps:          0       2       0       0       0       0
+      Totals:         0      10       0       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_KEYPAD_vInit
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_vInitSlaveSSP1 *****************
+ Defined at:
+		line 192 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+  u8Address       1    wreg     unsigned char 
+  eMode           1    9[BANK0 ] enum E2444
+  pvCallback      2   10[BANK0 ] PTR FTN(unsigned char ,u
+		 -> ssp1_vCallback(1), 
+ Auto vars:     Size  Location     Type
+  u8Address       1   12[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       3       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_vInitMasterSSP2 *****************
+ Defined at:
+		line 158 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+  eMode           1    wreg     enum E2441
+  u8ClkDiv        1    9[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  eMode           1   10[BANK0 ] enum E2441
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       1       0       0       0       0
+      Locals:         0       1       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _ISR *****************
+ Defined at:
+		line 248 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_I2C_vSlaveIsrSSP1
+		_timer_vInterrupt
+ This function is called by:
+		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function _timer_vInterrupt *****************
+ Defined at:
+		line 274 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0
+      Totals:         0       2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_KEYPAD_bUpdateBuffer
+		_KEYPAD_u8Read
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _KEYPAD_bUpdateBuffer *****************
+ Defined at:
+		line 114 in file "keypad.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u8Idx           1   13[COMMON] unsigned char 
+  u8KeyNo         1   12[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0
+      Temps:          2       0       0       0       0       0
+      Totals:         4       0       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_KEYPAD_u8Read
+		_criticalSec_vBegin
+		_criticalSec_vEnd
+ This function is called by:
+		_timer_vInterrupt
+ This function uses a non-reentrant model
+
+
+ *************** function _criticalSec_vEnd *****************
+ Defined at:
+		line 83 in file "libcom.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_KEYPAD_bUpdateBuffer
+		_KEYPAD_vClearBuffer
+		_KEYPAD_u8ReadBuffer
+		_KEYPAD_u8ReadFinal
+ This function uses a non-reentrant model
+
+
+ *************** function _criticalSec_vBegin *****************
+ Defined at:
+		line 65 in file "libcom.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0
+      Totals:         1       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_KEYPAD_bUpdateBuffer
+		_KEYPAD_vClearBuffer
+		_KEYPAD_u8ReadBuffer
+		_KEYPAD_u8ReadFinal
+ This function uses a non-reentrant model
+
+
+ *************** function _KEYPAD_u8Read *****************
+ Defined at:
+		line 195 in file "keypad.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u16PinMap       2    2[BANK0 ] unsigned int 
+  u8Row           1    6[BANK0 ] unsigned char 
+  u8KeyNo         1    5[BANK0 ] unsigned char 
+  u8Col           1    4[BANK0 ] unsigned char 
+  u8PortB         1    1[BANK0 ] unsigned char 
+  u8PortA         1    0[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       7       0       0       0       0
+      Temps:          2       0       0       0       0       0
+      Totals:         2       7       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_readColumn
+ This function is called by:
+		_timer_vInterrupt
+		_KEYPAD_bUpdateBuffer
+ This function uses a non-reentrant model
+
+
+ *************** function _readColumn *****************
+ Defined at:
+		line 350 in file "keypad.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  u16PinMap       2    5[COMMON] unsigned int 
+  u8Col           1    7[COMMON] unsigned char 
+  u8Port          1    4[COMMON] unsigned char 
+  portB           1    3[COMMON] unsigned char 
+  portA           1    2[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0
+      Temps:          2       0       0       0       0       0
+      Totals:         8       0       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_KEYPAD_u8Read
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_vSlaveIsrSSP1 *****************
+ Defined at:
+		line 492 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0
+      Totals:         2       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_ssp1_vCallback
+		_vDmyCallback
+ This function is called by:
+		_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _ssp1_vCallback *****************
+ Defined at:
+		line 321 in file "TestMain.c"
+ Parameters:    Size  Location     Type
+  u8BusNo         1    0[COMMON] unsigned char 
+  u8EvtType       1    1[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  u8Data          1    0        unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         2       0       0       0       0       0
+      Locals:         1       0       0       0       0       0
+      Temps:          2       0       0       0       0       0
+      Totals:         5       0       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_I2C_vSlaveIsrSSP1
+ This function uses a non-reentrant model
+
+
+ *************** function _vDmyCallback *****************
+ Defined at:
+		line 636 in file "i2cUtil.c"
+ Parameters:    Size  Location     Type
+  u8BusNo         1    0[COMMON] unsigned char 
+  u8EvtType       1    1[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4
+      Params:         2       0       0       0       0       0
+      Locals:         0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_vSlaveIsrSSP2
+		_I2C_vSlaveIsrSSP1
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+TestMain.c
+		_ssp1_vCallback		CODE           	0C1F	0000	51
+		_ISR           		CODE           	0004	0000	10
+		_main          		CODE           	077D	0000	108
+		_ssp2_vLCDTest01		CODE           	0404	0000	239
+		_ssp2_vLCDTest02		CODE           	002E	0000	562
+		_ssp2_vLCDTest03		CODE           	025F	0000	422
+		_ssp2_vLCDTest04		CODE           	06F4	0000	138
+		_timer_vInterrupt		CODE           	0B51	0000	40
+
+TestMain.c estimated size: 1570
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awmod.c
+		___awmod       		CODE           	0D41	0000	71
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awmod.c estimated size: 71
+
+keypad.c
+		_KEYPAD_vInit  		CODE           	0C51	0000	53
+		_KEYPAD_u8Read 		CODE           	04F2	0000	206
+		_readColumn    		CODE           	0CFC	0000	70
+		_KEYPAD_bUpdateBuffer		CODE           	0CBE	0000	63
+
+keypad.c estimated size: 392
+
+i2cUtil.c
+		_vDmyCallback  		CODE           	0003	0000	2
+		_I2C_u8MstStartSSP2		CODE           	0B13	0000	30
+		_vMasterWaitSSP2		CODE           	0A65	0000	9
+		_I2C_vSlaveIsrSSP1		CODE           	0BF3	0000	45
+		_I2C_vMstStopSSP2		CODE           	0A56	0000	8
+		_I2C_u8MstTxSSP2		CODE           	0A6D	0000	11
+		_I2C_vInitMasterSSP2		CODE           	0AFC	0000	24
+		_I2C_vInitSlaveSSP1		CODE           	0B9F	0000	43
+
+i2cUtil.c estimated size: 172
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+		___awdiv       		CODE           	0EEF	0000	83
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c estimated size: 83
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+		_memset        		CODE           	065E	0000	151
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c estimated size: 151
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+		___bmul        		CODE           	0AD5	0000	19
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c estimated size: 19
+
+shared
+		__initialization		CODE           	000F	0000	28
+		_HEX_LIST      		STRCODE        	07E8	0000	18
+		_KEY_LIST      		STRCODE        	080A	0000	18
+
+shared estimated size: 64
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c
+		_rand          		CODE           	05BF	0000	160
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c estimated size: 160
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+		___omul        		CODE           	0E14	0000	73
+
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c estimated size: 73
+
+st7032.c
+		_ST7032_vWriteStringSSP2		CODE           	0DCD	0000	72
+		_ST7032_vDispSettingSSP2		CODE           	0B30	0000	34
+		_vExecCmdEndSSP2		CODE           	0AA5	0000	15
+		_ST7032_u8GetCursorRowNoSSP2		CODE           	0AC4	0000	18
+		_ST7032_vInitSSP2		CODE           	0F95	0000	108
+		_ST7032_bCursorRightSSP2		CODE           	0A8D	0000	13
+		_ST7032_vWriteCGRAMSSP2		CODE           	0F41	0000	85
+		_ST7032_vWriteDataSSP2		CODE           	0E5C	0000	74
+		_bSetCursorSSP2		CODE           	0D87	0000	71
+		_ST7032_u8GetCursorColNoSSP2		CODE           	0AB3	0000	18
+		_ST7032_vWriteCharSSP2		CODE           	0B78	0000	40
+		_ST7032_vWriteIconSSP2		CODE           	0C85	0000	58
+		_ST7032_vClearIconSSP2		CODE           	0EA5	0000	75
+		_ST7032_vClearDispSSP2		CODE           	0AE7	0000	22
+		_vExecCmdSSP2  		CODE           	0A77	0000	12
+		_ST7032_bSetCursorSSP2		CODE           	0BC9	0000	43
+		_ST7032_bCursorLeftSSP2		CODE           	0A82	0000	12
+
+st7032.c estimated size: 770
+
+libcom.c
+		_criticalSec_vBegin		CODE           	0A4F	0000	8
+		_criticalSec_vEnd		CODE           	0A5D	0000	9
+
+libcom.c estimated size: 17
+

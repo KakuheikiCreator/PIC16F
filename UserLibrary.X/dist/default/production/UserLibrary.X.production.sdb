@@ -1,0 +1,726 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"121 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[e E2587 . `uc
+INPUT_MODE_NONE 0
+INPUT_MODE_CURRENT 1
+INPUT_MODE_FINAL 2
+INPUT_MODE_BUFFERING 3
+]
+"165
+[e E2444 I2C_SlaveMode `uc
+I2C_SLAVE_STD 0
+I2C_SLAVE_HIGH 1
+]
+"167
+[e E2441 I2C_MasterMode `uc
+I2C_MASTER_STD 0
+I2C_MASTER_HIGH 1
+]
+[e E2447 I2C_ClockDiv `uc
+I2C_CLK_DIV_STD_4MHZ 9
+I2C_CLK_DIV_STD_8MHZ 19
+I2C_CLK_DIV_STD_16MHZ 39
+I2C_CLK_DIV_STD_32MHZ 79
+I2C_CLK_DIV_HIGH_8MHZ 4
+I2C_CLK_DIV_HIGH_16MHZ 9
+I2C_CLK_DIV_HIGH_32MHZ 19
+]
+"354
+[e E2455 I2C_SlaveEvent `uc
+I2C_SLV_EVT_WRITE_ADDR 1
+I2C_SLV_EVT_WRITE_DATA 33
+I2C_SLV_EVT_READ_ADDR 5
+I2C_SLV_EVT_READ_ACK 36
+I2C_SLV_EVT_READ_NACK 100
+I2C_SLV_EVT_BUS_ERROR 255
+]
+"116 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[e E2441 I2C_MasterMode `uc
+I2C_MASTER_STD 0
+I2C_MASTER_HIGH 1
+]
+"192
+[e E2444 I2C_SlaveMode `uc
+I2C_SLAVE_STD 0
+I2C_SLAVE_HIGH 1
+]
+"505
+[e E2455 I2C_SlaveEvent `uc
+I2C_SLV_EVT_WRITE_ADDR 1
+I2C_SLV_EVT_WRITE_DATA 33
+I2C_SLV_EVT_READ_ADDR 5
+I2C_SLV_EVT_READ_ACK 36
+I2C_SLV_EVT_READ_NACK 100
+I2C_SLV_EVT_BUS_ERROR 255
+]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"158 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _I2C_vInitMasterSSP2 I2C_vInitMasterSSP2 `(v  1 e 1 0 ]
+"192
+[v _I2C_vInitSlaveSSP1 I2C_vInitSlaveSSP1 `(v  1 e 1 0 ]
+"284
+[v _I2C_u8MstStartSSP1 I2C_u8MstStartSSP1 `(uc  1 e 1 0 ]
+"316
+[v _I2C_u8MstStartSSP2 I2C_u8MstStartSSP2 `(uc  1 e 1 0 ]
+"345
+[v _I2C_vMstStopSSP1 I2C_vMstStopSSP1 `(v  1 e 1 0 ]
+"366
+[v _I2C_vMstStopSSP2 I2C_vMstStopSSP2 `(v  1 e 1 0 ]
+"388
+[v _I2C_u8MstTxSSP1 I2C_u8MstTxSSP1 `(uc  1 e 1 0 ]
+"411
+[v _I2C_u8MstTxSSP2 I2C_u8MstTxSSP2 `(uc  1 e 1 0 ]
+"464
+[v _I2C_u8MstRxSSP2 I2C_u8MstRxSSP2 `(uc  1 e 1 0 ]
+"492
+[v _I2C_vSlaveIsrSSP1 I2C_vSlaveIsrSSP1 `(v  1 e 1 0 ]
+"562
+[v _vMasterWaitSSP1 vMasterWaitSSP1 `(v  1 s 1 vMasterWaitSSP1 ]
+"580
+[v _vMasterWaitSSP2 vMasterWaitSSP2 `(v  1 s 1 vMasterWaitSSP2 ]
+"636
+[v _vDmyCallback vDmyCallback `(v  1 s 1 vDmyCallback ]
+"83 D:\MPLAB_PRJ\UserLibrary.X\keypad.c
+[v _KEYPAD_vInit KEYPAD_vInit `(v  1 e 1 0 ]
+"114
+[v _KEYPAD_bUpdateBuffer KEYPAD_bUpdateBuffer `(uc  1 e 1 0 ]
+"169
+[v _KEYPAD_vClearBuffer KEYPAD_vClearBuffer `(v  1 e 1 0 ]
+"195
+[v _KEYPAD_u8Read KEYPAD_u8Read `(uc  1 e 1 0 ]
+"283
+[v _KEYPAD_u8ReadBuffer KEYPAD_u8ReadBuffer `(uc  1 e 1 0 ]
+"314
+[v _KEYPAD_u8ReadFinal KEYPAD_u8ReadFinal `(uc  1 e 1 0 ]
+"350
+[v _readColumn readColumn `(uc  1 s 1 readColumn ]
+"65 D:\MPLAB_PRJ\UserLibrary.X\libcom.c
+[v _criticalSec_vBegin criticalSec_vBegin `(v  1 e 1 0 ]
+"83
+[v _criticalSec_vEnd criticalSec_vEnd `(v  1 e 1 0 ]
+"179 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vInitSSP2 ST7032_vInitSSP2 `(v  1 e 1 0 ]
+"337
+[v _ST7032_vClearDispSSP2 ST7032_vClearDispSSP2 `(v  1 e 1 0 ]
+"408
+[v _ST7032_vClearIconSSP2 ST7032_vClearIconSSP2 `(v  1 e 1 0 ]
+"554
+[v _ST7032_vDispSettingSSP2 ST7032_vDispSettingSSP2 `(v  1 e 1 0 ]
+"598
+[v _ST7032_u8GetCursorRowNoSSP2 ST7032_u8GetCursorRowNoSSP2 `(uc  1 e 1 0 ]
+"638
+[v _ST7032_u8GetCursorColNoSSP2 ST7032_u8GetCursorColNoSSP2 `(uc  1 e 1 0 ]
+"693
+[v _ST7032_bSetCursorSSP2 ST7032_bSetCursorSSP2 `(uc  1 e 1 0 ]
+"747
+[v _ST7032_bCursorLeftSSP2 ST7032_bCursorLeftSSP2 `(uc  1 e 1 0 ]
+"795
+[v _ST7032_bCursorRightSSP2 ST7032_bCursorRightSSP2 `(uc  1 e 1 0 ]
+"864
+[v _ST7032_vWriteCGRAMSSP2 ST7032_vWriteCGRAMSSP2 `(v  1 e 1 0 ]
+"936
+[v _ST7032_vWriteCharSSP2 ST7032_vWriteCharSSP2 `(v  1 e 1 0 ]
+"1000
+[v _ST7032_vWriteStringSSP2 ST7032_vWriteStringSSP2 `(v  1 e 1 0 ]
+"1073
+[v _ST7032_vWriteDataSSP2 ST7032_vWriteDataSSP2 `(v  1 e 1 0 ]
+"1150
+[v _ST7032_vWriteIconSSP2 ST7032_vWriteIconSSP2 `(v  1 e 1 0 ]
+"1193
+[v _vExecCmdSSP1 vExecCmdSSP1 `(v  1 s 1 vExecCmdSSP1 ]
+"1216
+[v _vExecCmdSSP2 vExecCmdSSP2 `(v  1 s 1 vExecCmdSSP2 ]
+"1239
+[v _vExecCmdEndSSP1 vExecCmdEndSSP1 `(v  1 s 1 vExecCmdEndSSP1 ]
+"1264
+[v _vExecCmdEndSSP2 vExecCmdEndSSP2 `(v  1 s 1 vExecCmdEndSSP2 ]
+"1290
+[v _bSetCursorSSP1 bSetCursorSSP1 `(uc  1 s 1 bSetCursorSSP1 ]
+"1321
+[v _bSetCursorSSP2 bSetCursorSSP2 `(uc  1 s 1 bSetCursorSSP2 ]
+"138 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _main main `(v  1 e 1 0 ]
+"248
+[v _ISR ISR `II(v  1 e 1 0 ]
+"274
+[v _timer_vInterrupt timer_vInterrupt `(v  1 s 1 timer_vInterrupt ]
+"321
+[v _ssp1_vCallback ssp1_vCallback `(v  1 s 1 ssp1_vCallback ]
+"591
+[v _ssp2_vLCDTest01 ssp2_vLCDTest01 `(v  1 s 1 ssp2_vLCDTest01 ]
+"651
+[v _ssp2_vLCDTest02 ssp2_vLCDTest02 `(v  1 s 1 ssp2_vLCDTest02 ]
+"792
+[v _ssp2_vLCDTest03 ssp2_vLCDTest03 `(v  1 s 1 ssp2_vLCDTest03 ]
+"916
+[v _ssp2_vLCDTest04 ssp2_vLCDTest04 `(v  1 s 1 ssp2_vLCDTest04 ]
+"429 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1827.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"491
+[v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"732
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"1152
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1214
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1455
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+"1706
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2861
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2913
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3586
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3624
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3662
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
+"3700
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S485 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3722
+[u S494 . 1 `S485 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES494  1 e 1 @532 ]
+"3822
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S426 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3851
+[s S435 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S437 . 1 `S426 1 . 1 0 `S435 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES437  1 e 1 @533 ]
+"4026
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S378 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4048
+[u S387 . 1 `S378 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES387  1 e 1 @534 ]
+"4148
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @535 ]
+"4270
+[v _SSP2BUF SSP2BUF `VEuc  1 e 1 @537 ]
+"4290
+[v _SSP2ADD SSP2ADD `VEuc  1 e 1 @538 ]
+"4310
+[v _SSP2MSK SSP2MSK `VEuc  1 e 1 @539 ]
+"4330
+[v _SSP2STAT SSP2STAT `VEuc  1 e 1 @540 ]
+"4347
+[v _SSP2STATbits SSP2STATbits `VES494  1 e 1 @540 ]
+"4392
+[v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @541 ]
+"4412
+[v _SSP2CON1bits SSP2CON1bits `VES437  1 e 1 @541 ]
+"4462
+[v _SSP2CON2 SSP2CON2 `VEuc  1 e 1 @542 ]
+"4479
+[v _SSP2CON2bits SSP2CON2bits `VES387  1 e 1 @542 ]
+"4524
+[v _SSP2CON3 SSP2CON3 `VEuc  1 e 1 @543 ]
+"6856
+[v _BCL1IE BCL1IE `VEb  1 e 0 @1171 ]
+"6859
+[v _BCL1IF BCL1IF `VEb  1 e 0 @147 ]
+"6862
+[v _BCL2IE BCL2IE `VEb  1 e 0 @1185 ]
+"6865
+[v _BCL2IF BCL2IF `VEb  1 e 0 @161 ]
+"7276
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"7609
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"7675
+[v _RB0 RB0 `VEb  1 e 0 @104 ]
+"7684
+[v _RB3 RB3 `VEb  1 e 0 @107 ]
+"7798
+[v _SSP1IE SSP1IE `VEb  1 e 0 @1163 ]
+"7801
+[v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
+"7804
+[v _SSP2IE SSP2IE `VEb  1 e 0 @1184 ]
+"7807
+[v _SSP2IF SSP2IF `VEb  1 e 0 @160 ]
+"7957
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"7960
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c
+[v _seed seed `uo  1 s 8 seed ]
+"78 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _bMstStartFlgSSP1 bMstStartFlgSSP1 `uc  1 s 1 bMstStartFlgSSP1 ]
+"80
+[v _bMstStartFlgSSP2 bMstStartFlgSSP2 `uc  1 s 1 bMstStartFlgSSP2 ]
+"84
+[v _pvSSP1Func pvSSP1Func `*.37(v  1 s 2 pvSSP1Func ]
+"86
+[v _pvSSP2Func pvSSP2Func `*.37(v  1 s 2 pvSSP2Func ]
+[s S72 . 27 `uc 1 u8CheckCnt 1 0 `[4]ui 1 u16PinCols 8 1 `[4]ui 1 u16PinRows 8 9 `uc 1 u8BeforeKeyNo 1 17 `ui 1 u16KeyChkCnt 2 18 `[4]uc 1 u8KeyBuffer 4 20 `uc 1 u8BuffSize 1 24 `uc 1 u8BuffBeginIdx 1 25 `uc 1 u8BuffEndIdx 1 26 ]
+"63 D:\MPLAB_PRJ\UserLibrary.X\keypad.c
+[v _spKEYPAD_status spKEYPAD_status `*.4S72  1 s 1 spKEYPAD_status ]
+"46 D:\MPLAB_PRJ\UserLibrary.X\libcom.c
+[v _u8Depth u8Depth `VEuc  1 s 1 u8Depth ]
+[s S721 . 2 `uc 1 u8CursorPos 1 0 `uc 1 u8Settings 1 1 ]
+"104 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _stStateSSP1 stStateSSP1 `S721  1 s 2 stStateSSP1 ]
+"107
+[v _stStateSSP2 stStateSSP2 `S721  1 s 2 stStateSSP2 ]
+"116 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _HEX_LIST HEX_LIST `DC[17]uc  1 s 17 HEX_LIST ]
+"117
+[v _KEY_LIST KEY_LIST `DC[17]uc  1 s 17 KEY_LIST ]
+"119
+[v _u8RxData u8RxData `uc  1 s 1 u8RxData ]
+"121
+[v _eInputMode eInputMode `E2587  1 s 1 eInputMode ]
+"123
+[v _u8KeyValue u8KeyValue `uc  1 s 1 u8KeyValue ]
+"138
+[v _main main `(v  1 e 1 0 ]
+{
+[s S72 . 27 `uc 1 u8CheckCnt 1 0 `[4]ui 1 u16PinCols 8 1 `[4]ui 1 u16PinRows 8 9 `uc 1 u8BeforeKeyNo 1 17 `ui 1 u16KeyChkCnt 2 18 `[4]uc 1 u8KeyBuffer 4 20 `uc 1 u8BuffSize 1 24 `uc 1 u8BuffBeginIdx 1 25 `uc 1 u8BuffEndIdx 1 26 ]
+"172
+[v main@keypadSts keypadSts `S72  1 a 27 16 ]
+"233
+} 0
+"916
+[v _ssp2_vLCDTest04 ssp2_vLCDTest04 `(v  1 s 1 ssp2_vLCDTest04 ]
+{
+"932
+[v ssp2_vLCDTest04@u8SVal u8SVal `uc  1 a 1 7 ]
+"931
+[v ssp2_vLCDTest04@u8Addr u8Addr `uc  1 a 1 6 ]
+"949
+} 0
+"1150 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vWriteIconSSP2 ST7032_vWriteIconSSP2 `(v  1 e 1 0 ]
+{
+[v ST7032_vWriteIconSSP2@u8Addr u8Addr `uc  1 a 1 wreg ]
+[v ST7032_vWriteIconSSP2@u8Addr u8Addr `uc  1 a 1 wreg ]
+[v ST7032_vWriteIconSSP2@u8Map u8Map `uc  1 p 1 61 ]
+"1152
+[v ST7032_vWriteIconSSP2@u8Addr u8Addr `uc  1 a 1 0 ]
+"1171
+} 0
+"408
+[v _ST7032_vClearIconSSP2 ST7032_vClearIconSSP2 `(v  1 e 1 0 ]
+{
+"425
+[v ST7032_vClearIconSSP2@u8Addr u8Addr `uc  1 a 1 0 ]
+"436
+} 0
+"792 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _ssp2_vLCDTest03 ssp2_vLCDTest03 `(v  1 s 1 ssp2_vLCDTest03 ]
+{
+"796
+[v ssp2_vLCDTest03@u8BitMap u8BitMap `[8]uc  1 a 8 7 ]
+"875
+[v ssp2_vLCDTest03@u8Idx u8Idx `uc  1 a 1 6 ]
+"792
+[v ssp2_vLCDTest03@F2641 F2641 `[8]uc  1 s 8 F2641 ]
+"901
+} 0
+"864 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vWriteCGRAMSSP2 ST7032_vWriteCGRAMSSP2 `(v  1 e 1 0 ]
+{
+[v ST7032_vWriteCGRAMSSP2@u8CharNo u8CharNo `uc  1 a 1 wreg ]
+"877
+[v ST7032_vWriteCGRAMSSP2@u8Idx u8Idx `uc  1 a 1 3 ]
+"876
+[v ST7032_vWriteCGRAMSSP2@pu8WkMap pu8WkMap `*.4uc  1 a 1 2 ]
+"864
+[v ST7032_vWriteCGRAMSSP2@u8CharNo u8CharNo `uc  1 a 1 wreg ]
+[v ST7032_vWriteCGRAMSSP2@pu8BitMap pu8BitMap `*.4uc  1 p 1 61 ]
+"866
+[v ST7032_vWriteCGRAMSSP2@u8CharNo u8CharNo `uc  1 a 1 1 ]
+"889
+} 0
+"651 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _ssp2_vLCDTest02 ssp2_vLCDTest02 `(v  1 s 1 ssp2_vLCDTest02 ]
+{
+"665
+[v ssp2_vLCDTest02@u8Idx u8Idx `uc  1 a 1 6 ]
+"777
+} 0
+"554 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vDispSettingSSP2 ST7032_vDispSettingSSP2 `(v  1 e 1 0 ]
+{
+[v ST7032_vDispSettingSSP2@bDisp bDisp `uc  1 a 1 wreg ]
+[v ST7032_vDispSettingSSP2@bDisp bDisp `uc  1 a 1 wreg ]
+[v ST7032_vDispSettingSSP2@bCursor bCursor `uc  1 p 1 11 ]
+[v ST7032_vDispSettingSSP2@bBlink bBlink `uc  1 p 1 12 ]
+"556
+[v ST7032_vDispSettingSSP2@bDisp bDisp `uc  1 a 1 15 ]
+"560
+} 0
+"598
+[v _ST7032_u8GetCursorRowNoSSP2 ST7032_u8GetCursorRowNoSSP2 `(uc  1 e 1 0 ]
+{
+"600
+} 0
+"638
+[v _ST7032_u8GetCursorColNoSSP2 ST7032_u8GetCursorColNoSSP2 `(uc  1 e 1 0 ]
+{
+"640
+} 0
+"795
+[v _ST7032_bCursorRightSSP2 ST7032_bCursorRightSSP2 `(uc  1 e 1 0 ]
+{
+"801
+} 0
+"747
+[v _ST7032_bCursorLeftSSP2 ST7032_bCursorLeftSSP2 `(uc  1 e 1 0 ]
+{
+"753
+} 0
+"591 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _ssp2_vLCDTest01 ssp2_vLCDTest01 `(v  1 s 1 ssp2_vLCDTest01 ]
+{
+"600
+[v ssp2_vLCDTest01@val val `uc  1 a 1 7 ]
+"607
+[v ssp2_vLCDTest01@u8Idx u8Idx `uc  1 a 1 6 ]
+"636
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
+{
+"27
+} 0
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+{
+"93
+[v ___omul@product product `uo  1 a 8 26 ]
+"91
+[v ___omul@multiplier multiplier `uo  1 p 8 9 ]
+[v ___omul@multiplicand multiplicand `uo  1 p 8 17 ]
+"354
+} 0
+"1000 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vWriteStringSSP2 ST7032_vWriteStringSSP2 `(v  1 e 1 0 ]
+{
+"1006
+[v ST7032_vWriteStringSSP2@pcWkData pcWkData `*.25uc  1 a 2 57 ]
+"1000
+[v ST7032_vWriteStringSSP2@pcStr pcStr `*.25uc  1 p 2 51 ]
+"1017
+} 0
+"1073
+[v _ST7032_vWriteDataSSP2 ST7032_vWriteDataSSP2 `(v  1 e 1 0 ]
+{
+[v ST7032_vWriteDataSSP2@pcData pcData `*.4uc  1 a 1 wreg ]
+"1079
+[v ST7032_vWriteDataSSP2@pu8WkData pu8WkData `*.4uc  1 a 1 59 ]
+"1080
+[v ST7032_vWriteDataSSP2@u8Idx u8Idx `uc  1 a 1 57 ]
+"1073
+[v ST7032_vWriteDataSSP2@pcData pcData `*.4uc  1 a 1 wreg ]
+[v ST7032_vWriteDataSSP2@u8Len u8Len `uc  1 p 1 51 ]
+"1075
+[v ST7032_vWriteDataSSP2@pcData pcData `*.4uc  1 a 1 58 ]
+"1091
+} 0
+"936
+[v _ST7032_vWriteCharSSP2 ST7032_vWriteCharSSP2 `(v  1 e 1 0 ]
+{
+[v ST7032_vWriteCharSSP2@cData cData `uc  1 a 1 wreg ]
+[v ST7032_vWriteCharSSP2@cData cData `uc  1 a 1 wreg ]
+"938
+[v ST7032_vWriteCharSSP2@cData cData `uc  1 a 1 52 ]
+"947
+} 0
+"337
+[v _ST7032_vClearDispSSP2 ST7032_vClearDispSSP2 `(v  1 e 1 0 ]
+{
+"345
+} 0
+"693
+[v _ST7032_bSetCursorSSP2 ST7032_bSetCursorSSP2 `(uc  1 e 1 0 ]
+{
+[v ST7032_bSetCursorSSP2@u8RowNo u8RowNo `uc  1 a 1 wreg ]
+"699
+[v ST7032_bSetCursorSSP2@u8Addr u8Addr `uc  1 a 1 3 ]
+"693
+[v ST7032_bSetCursorSSP2@u8RowNo u8RowNo `uc  1 a 1 wreg ]
+[v ST7032_bSetCursorSSP2@u8ColNo u8ColNo `uc  1 p 1 61 ]
+"695
+[v ST7032_bSetCursorSSP2@u8RowNo u8RowNo `uc  1 a 1 2 ]
+"705
+} 0
+"1321
+[v _bSetCursorSSP2 bSetCursorSSP2 `(uc  1 s 1 bSetCursorSSP2 ]
+{
+[v bSetCursorSSP2@u8Pos u8Pos `uc  1 a 1 wreg ]
+"1325
+[v bSetCursorSSP2@u8Addr u8Addr `uc  1 a 1 59 ]
+"1321
+[v bSetCursorSSP2@u8Pos u8Pos `uc  1 a 1 wreg ]
+"1323
+[v bSetCursorSSP2@u8Pos u8Pos `uc  1 a 1 60 ]
+"1333
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 50 ]
+[v ___awmod@counter counter `uc  1 a 1 49 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 44 ]
+[v ___awmod@dividend dividend `i  1 p 2 46 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 16 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 15 ]
+[v ___awdiv@counter counter `uc  1 a 1 14 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 9 ]
+[v ___awdiv@dividend dividend `i  1 p 2 11 ]
+"41
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 11 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 9 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 12 ]
+"51
+} 0
+"179 D:\MPLAB_PRJ\UserLibrary.X\st7032.c
+[v _ST7032_vInitSSP2 ST7032_vInitSSP2 `(v  1 e 1 0 ]
+{
+"215
+} 0
+"1216
+[v _vExecCmdSSP2 vExecCmdSSP2 `(v  1 s 1 vExecCmdSSP2 ]
+{
+[v vExecCmdSSP2@u8Cmd u8Cmd `uc  1 a 1 wreg ]
+[v vExecCmdSSP2@u8Cmd u8Cmd `uc  1 a 1 wreg ]
+"1218
+[v vExecCmdSSP2@u8Cmd u8Cmd `uc  1 a 1 10 ]
+"1221
+} 0
+"1264
+[v _vExecCmdEndSSP2 vExecCmdEndSSP2 `(v  1 s 1 vExecCmdEndSSP2 ]
+{
+[v vExecCmdEndSSP2@u8Cmd u8Cmd `uc  1 a 1 wreg ]
+[v vExecCmdEndSSP2@u8Cmd u8Cmd `uc  1 a 1 wreg ]
+"1266
+[v vExecCmdEndSSP2@u8Cmd u8Cmd `uc  1 a 1 10 ]
+"1271
+} 0
+"366 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _I2C_vMstStopSSP2 I2C_vMstStopSSP2 `(v  1 e 1 0 ]
+{
+"370
+} 0
+"411
+[v _I2C_u8MstTxSSP2 I2C_u8MstTxSSP2 `(uc  1 e 1 0 ]
+{
+[v I2C_u8MstTxSSP2@u8Data u8Data `uc  1 a 1 wreg ]
+[v I2C_u8MstTxSSP2@u8Data u8Data `uc  1 a 1 wreg ]
+[v I2C_u8MstTxSSP2@u8Data u8Data `uc  1 a 1 9 ]
+"415
+} 0
+"316
+[v _I2C_u8MstStartSSP2 I2C_u8MstStartSSP2 `(uc  1 e 1 0 ]
+{
+[v I2C_u8MstStartSSP2@u8Address u8Address `uc  1 a 1 wreg ]
+[v I2C_u8MstStartSSP2@u8Address u8Address `uc  1 a 1 wreg ]
+[v I2C_u8MstStartSSP2@bReadFlg bReadFlg `uc  1 p 1 9 ]
+"318
+[v I2C_u8MstStartSSP2@u8Address u8Address `uc  1 a 1 10 ]
+"329
+} 0
+"580
+[v _vMasterWaitSSP2 vMasterWaitSSP2 `(v  1 s 1 vMasterWaitSSP2 ]
+{
+"582
+} 0
+"83 D:\MPLAB_PRJ\UserLibrary.X\keypad.c
+[v _KEYPAD_vInit KEYPAD_vInit `(v  1 e 1 0 ]
+{
+[s S72 . 27 `uc 1 u8CheckCnt 1 0 `[4]ui 1 u16PinCols 8 1 `[4]ui 1 u16PinRows 8 9 `uc 1 u8BeforeKeyNo 1 17 `ui 1 u16KeyChkCnt 2 18 `[4]uc 1 u8KeyBuffer 4 20 `uc 1 u8BuffSize 1 24 `uc 1 u8BuffBeginIdx 1 25 `uc 1 u8BuffEndIdx 1 26 ]
+[v KEYPAD_vInit@spStatus spStatus `*.4S72  1 a 1 wreg ]
+[v KEYPAD_vInit@spStatus spStatus `*.4S72  1 a 1 wreg ]
+[v KEYPAD_vInit@spStatus spStatus `*.4S72  1 a 1 20 ]
+"98
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+[v _memset memset `(*.4v  1 e 1 0 ]
+{
+[v memset@dest dest `*.4v  1 a 1 wreg ]
+"7
+[v memset@k k `ui  1 a 2 15 ]
+"6
+[v memset@s s `*.4uc  1 a 1 18 ]
+"4
+[v memset@dest dest `*.4v  1 a 1 wreg ]
+[v memset@c c `i  1 p 2 9 ]
+[v memset@n n `ui  1 p 2 11 ]
+"6
+[v memset@dest dest `*.4v  1 a 1 17 ]
+"90
+} 0
+"192 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _I2C_vInitSlaveSSP1 I2C_vInitSlaveSSP1 `(v  1 e 1 0 ]
+{
+[v I2C_vInitSlaveSSP1@u8Address u8Address `uc  1 a 1 wreg ]
+[v I2C_vInitSlaveSSP1@u8Address u8Address `uc  1 a 1 wreg ]
+[v I2C_vInitSlaveSSP1@eMode eMode `E2444  1 p 1 9 ]
+"193
+[v I2C_vInitSlaveSSP1@pvCallback pvCallback `*.37(v  1 p 2 10 ]
+"195
+[v I2C_vInitSlaveSSP1@u8Address u8Address `uc  1 a 1 12 ]
+"219
+} 0
+"158
+[v _I2C_vInitMasterSSP2 I2C_vInitMasterSSP2 `(v  1 e 1 0 ]
+{
+[v I2C_vInitMasterSSP2@eMode eMode `E2441  1 a 1 wreg ]
+[v I2C_vInitMasterSSP2@eMode eMode `E2441  1 a 1 wreg ]
+[v I2C_vInitMasterSSP2@u8ClkDiv u8ClkDiv `uc  1 p 1 9 ]
+"160
+[v I2C_vInitMasterSSP2@eMode eMode `E2441  1 a 1 10 ]
+"174
+} 0
+"248 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"259
+} 0
+"274
+[v _timer_vInterrupt timer_vInterrupt `(v  1 s 1 timer_vInterrupt ]
+{
+"304
+} 0
+"114 D:\MPLAB_PRJ\UserLibrary.X\keypad.c
+[v _KEYPAD_bUpdateBuffer KEYPAD_bUpdateBuffer `(uc  1 e 1 0 ]
+{
+"128
+[v KEYPAD_bUpdateBuffer@u8Idx u8Idx `uc  1 a 1 13 ]
+"121
+[v KEYPAD_bUpdateBuffer@u8KeyNo u8KeyNo `uc  1 a 1 12 ]
+"135
+} 0
+"83 D:\MPLAB_PRJ\UserLibrary.X\libcom.c
+[v _criticalSec_vEnd criticalSec_vEnd `(v  1 e 1 0 ]
+{
+"88
+} 0
+"65
+[v _criticalSec_vBegin criticalSec_vBegin `(v  1 e 1 0 ]
+{
+"68
+} 0
+"195 D:\MPLAB_PRJ\UserLibrary.X\keypad.c
+[v _KEYPAD_u8Read KEYPAD_u8Read `(uc  1 e 1 0 ]
+{
+"205
+[v KEYPAD_u8Read@u16PinMap u16PinMap `ui  1 a 2 2 ]
+"207
+[v KEYPAD_u8Read@u8Row u8Row `uc  1 a 1 6 ]
+"244
+[v KEYPAD_u8Read@u8KeyNo u8KeyNo `uc  1 a 1 5 ]
+"206
+[v KEYPAD_u8Read@u8Col u8Col `uc  1 a 1 4 ]
+"199
+[v KEYPAD_u8Read@u8PortB u8PortB `uc  1 a 1 1 ]
+"197
+[v KEYPAD_u8Read@u8PortA u8PortA `uc  1 a 1 0 ]
+"266
+} 0
+"350
+[v _readColumn readColumn `(uc  1 s 1 readColumn ]
+{
+"360
+[v readColumn@u16PinMap u16PinMap `ui  1 a 2 5 ]
+"362
+[v readColumn@u8Col u8Col `uc  1 a 1 7 ]
+"361
+[v readColumn@u8Port u8Port `uc  1 a 1 4 ]
+"354
+[v readColumn@portB portB `uc  1 a 1 3 ]
+"352
+[v readColumn@portA portA `uc  1 a 1 2 ]
+"390
+} 0
+"492 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _I2C_vSlaveIsrSSP1 I2C_vSlaveIsrSSP1 `(v  1 e 1 0 ]
+{
+"509
+} 0
+"321 D:\MPLAB_PRJ\UserLibrary.X\TestMain.c
+[v _ssp1_vCallback ssp1_vCallback `(v  1 s 1 ssp1_vCallback ]
+{
+[v ssp1_vCallback@u8EvtType u8EvtType `uc  1 p 1 1 ]
+"355
+} 0
+"636 D:\MPLAB_PRJ\UserLibrary.X\i2cUtil.c
+[v _vDmyCallback vDmyCallback `(v  1 s 1 vDmyCallback ]
+{
+[v vDmyCallback@u8BusNo u8BusNo `uc  1 p 1 0 ]
+[v vDmyCallback@u8EvtType u8EvtType `uc  1 p 1 1 ]
+"638
+} 0
